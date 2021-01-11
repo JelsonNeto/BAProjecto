@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="1028.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerirEntidade.CTurmaController">
+    <stylesheets>
+        <URL value="@/estilos/cturma.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="25.0" layoutY="32.0" style="-: ;" styleClass="LabelTurma" stylesheets="@../estilos/cturma.css" text="Turma Selecionada" underline="true">
+         <font>
+            <Font name="Segoe UI Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nome_turma" layoutX="31.0" layoutY="91.0" prefHeight="30.0" prefWidth="218.0" promptText="Insira o nome da turma" />
+      <ComboBox fx:id="curso_turma" layoutX="31.0" layoutY="121.0" onAction="#SelecionaCurso_InicializaClasse" prefHeight="30.0" prefWidth="218.0" promptText="Selecione o curso" />
+      <ComboBox fx:id="cb_classe" layoutX="31.0" layoutY="155.0" onAction="#SelecionaClasse_InicializaProfessor" prefHeight="30.0" prefWidth="218.0" promptText="Selecione a classe" />
+      <Button fx:id="btn_adicionar" layoutX="31.0" layoutY="303.0" mnemonicParsing="false" onAction="#Adicionar" prefHeight="50.0" prefWidth="218.0" style="-fx-background-color: #006699;" text="Adicionar" textFill="WHITE" />
+      <Button layoutX="787.0" layoutY="42.0" mnemonicParsing="false" onAction="#Editar" prefHeight="41.0" prefWidth="209.0" style="-fx-background-color: #006699;" text="Editar" textFill="WHITE" />
+      <Button layoutX="31.0" layoutY="414.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="50.0" prefWidth="218.0" style="-fx-background-color: #006699;" text="Eliminar" textFill="WHITE" />
+      <TableView fx:id="tabela" layoutX="286.0" layoutY="89.0" onMouseClicked="#TabelaClicada" prefHeight="376.0" prefWidth="710.0">
+         <columns>
+            <TableColumn fx:id="nomeTurma_coluna" prefWidth="122.0" text="Nome da Turma" />
+            <TableColumn fx:id="nome_curso_coluna" prefWidth="163.0" text="Curso Associado" />
+            <TableColumn fx:id="coluna_classe" minWidth="0.0" prefWidth="138.0" text="Classe  Associada" />
+            <TableColumn fx:id="numero_sala_coluna" prefWidth="104.0" text="Sala Associada" />
+            <TableColumn fx:id="coluna_directorTurma" prefWidth="182.0" text="Director de Turma" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_actualizar" layoutX="31.0" layoutY="358.0" mnemonicParsing="false" onAction="#Actualizar" prefHeight="50.0" prefWidth="218.0" style="-fx-background-color: #006699;" text="Actualizar" textFill="WHITE" />
+      <ComboBox fx:id="sala_turma" layoutX="31.0" layoutY="189.0" prefHeight="30.0" prefWidth="218.0" promptText="Selecione a sala" />
+      <ComboBox fx:id="cb_periodo" layoutX="31.0" layoutY="221.0" prefHeight="30.0" prefWidth="218.0" promptText="Selecione o Periodo" />
+      <ComboBox fx:id="cb_directorTurma" layoutX="30.0" layoutY="256.0" prefHeight="30.0" prefWidth="218.0" promptText="Selecione o director de Turma" />
+      <TextField fx:id="txt_pesquisa" layoutX="534.0" layoutY="51.0" prefHeight="25.0" prefWidth="210.0" promptText="Digite o que quer Pesquisar aqui" />
+      <ComboBox fx:id="cb_pesquisa" layoutX="372.0" layoutY="51.0" prefWidth="150.0" promptText="Selecione o campo" />
+      <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="750.0" layoutY="47.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/lupa.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_addprof" disable="true" layoutX="572.0" layoutY="469.0" mnemonicParsing="false" onAction="#Addprofessores" prefHeight="40.0" prefWidth="209.0" style="-fx-background-color: #006699;" text="Adicionar Professores" textFill="WHITE" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="63.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/if_plus_1772631.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="63.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="65.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/apagar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="581.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/professor.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_viewprofessor" disable="true" layoutX="787.0" layoutY="469.0" mnemonicParsing="false" onAction="#viewProfessores" prefHeight="40.0" prefWidth="209.0" style="-fx-background-color: #006699;" text="Visualizar Professores" textFill="WHITE" />
+   </children>
+</AnchorPane>

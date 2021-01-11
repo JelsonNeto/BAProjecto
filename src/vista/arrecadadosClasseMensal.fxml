@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="973.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.ArrecadadosClasseMensalController">
+   <children>
+      <Label layoutX="14.0" layoutY="22.0" text="Valores Arrecadados por Classe ">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="190.0" text="Confirmação" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="229.0" text="Valor:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="280.0" text="Mensalidade ( Propina )" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="326.0" text="Valor:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="381.0" text="Valor Total" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="420.0" text="Valor:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="5.0" layoutY="79.0" prefHeight="4.0" prefWidth="960.0" />
+      <Label layoutX="671.0" layoutY="51.0" text="Filtragem dos Dados " textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="total_confirmacao" layoutX="188.0" layoutY="229.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="total_propina" layoutX="190.0" layoutY="325.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="total_geral" layoutX="196.0" layoutY="420.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="700.0" layoutY="421.0" text="Ano Lectivo:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_ano" layoutX="846.0" layoutY="422.0">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="97.0" text="Matricula" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="136.0" text="Valor:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="total_matricula" layoutX="188.0" layoutY="136.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_curso" layoutX="666.0" layoutY="114.0" onAction="#SelecionaCurso_InicializaClasse" prefHeight="29.0" prefWidth="228.0" promptText="Selecione o curso" />
+      <JFXComboBox fx:id="cb_classe" layoutX="667.0" layoutY="168.0" onAction="#SelecionaClasse_FazerCalculos" prefHeight="29.0" prefWidth="228.0" promptText="Selecione a classe" />
+      <JFXComboBox fx:id="cb_mes" layoutX="670.0" layoutY="225.0" onAction="#Selecao_do_Mes_InicializaAno" prefHeight="29.0" prefWidth="228.0" promptText="Selecione o mês" />
+      <JFXComboBox fx:id="cb_ano" layoutX="669.0" layoutY="280.0" onAction="#InicializaTabela" prefHeight="29.0" prefWidth="228.0" promptText="Selecione o ano" />
+   </children>
+</AnchorPane>

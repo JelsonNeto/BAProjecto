@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="958.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.DefinicoespagamentoController">
+   <children>
+      <Label layoutX="46.0" layoutY="14.0" text="Definições" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="50.0" onMouseClicked="#showAdd" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Cadastrar Preços">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="50.0" onMouseClicked="#showView" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Visualizar Preços">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Label>
+      <Pane fx:id="principal" layoutX="45.0" layoutY="88.0" prefHeight="384.0" prefWidth="892.0" />
+      <Label layoutX="299.0" layoutY="50.0" onMouseClicked="#showAddMesAno" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Cadastrar Mês/Ano de Cobrança">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Label>
+      <Pane layoutX="913.0" layoutY="1.0" onMouseClicked="#AbirInfo" prefHeight="39.0" prefWidth="44.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fx:id="imagem1" fitHeight="25.0" fitWidth="41.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/informacao.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Encarregado.VisualizarEncarregadoController">
+   <children>
+      <Label layoutX="50.0" layoutY="14.0" style="-fx-text-fill: #006699;" text="Visualizar">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="38.0" layoutY="51.0" prefHeight="442.0" prefWidth="786.0">
+        <columns>
+          <TableColumn fx:id="coluna_nomepai" prefWidth="128.0" text="Nome do Pai" />
+          <TableColumn fx:id="coluna_nomemae" prefWidth="208.0" text="Nome da Mãe" />
+            <TableColumn fx:id="coluna_ocupacao" prefWidth="109.0" text="Ocupação" />
+            <TableColumn fx:id="coluna_endereco" prefWidth="195.0" text="Endereço" />
+            <TableColumn fx:id="coluna_contato" prefWidth="151.0" text="Contacto" />
+            <TableColumn fx:id="coluna_nome1" prefWidth="128.0" text="Nome do Pai" />
+        </columns>
+      </TableView>
+      <Button fx:id="actualizar" layoutX="835.0" layoutY="246.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="50.0" prefWidth="185.0" text="Actualizar">
+         <stylesheets>
+            <URL value="@../estilos/visualizarpagamento.css" />
+            <URL value="@../estilos/adicionarestudante.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="botoes" />
+            <String fx:value="botao" />
+         </styleClass></Button>
+      <Button fx:id="Eliminar" layoutX="835.0" layoutY="301.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="50.0" prefWidth="185.0" text="Eliminar">
+         <stylesheets>
+            <URL value="@../estilos/visualizarpagamento.css" />
+            <URL value="@../estilos/adicionarestudante.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="botoes" />
+            <String fx:value="botao" />
+         </styleClass></Button>
+      <TextField fx:id="txt_pesquisa" layoutX="582.0" layoutY="15.0" prefHeight="25.0" prefWidth="206.0" promptText="Digite o que deseja visualizar" />
+      <Separator layoutX="825.0" layoutY="220.0" prefHeight="1.0" prefWidth="206.0" />
+      <Label layoutX="869.0" layoutY="186.0" text="Operações">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="869.0" layoutY="84.0" text="Pesquisar por" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_opcoesPesquisa" layoutX="827.0" layoutY="121.0" prefHeight="32.0" prefWidth="196.0" promptText="Selecione a opção" />
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="848.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/apagar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="848.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir1.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="788.0" layoutY="9.0" prefHeight="43.0" prefWidth="55.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="12.0" layoutY="6.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

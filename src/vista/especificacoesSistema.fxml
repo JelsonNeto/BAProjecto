@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="995.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="95.0" layoutY="21.0" text="Especificações do Sistema" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="51.0" layoutX="33.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/download%20(3).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="85.0" layoutY="96.0" text="Sistema de Gestão Escolar &quot;EManager-1&quot; Personalizado p/C.Escolar GENIX" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="147.0" text="Versão : ">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="194.0" text="Sistemas operacionais:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="234.0" text="Plataforma de criação:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="192.0" layoutY="146.0" text="1.0.0">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="195.0" text="Este sistema pode  ser utilizado nos sistemas windows 7,8,8.1, 10">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="234.0" text="Criado em Java">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="278.0" text="Interface Gráfica:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="278.0" text="Foi criado utilizando a Classe de API JavaFx">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="318.0" text="Padrão de Projecto:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="307.0" layoutY="318.0" text="MVC">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="361.0" text="Sistema de Base de Dados:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="361.0" text="PostgreSQL">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="401.0" text="Licença de utilização:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="314.0" layoutY="401.0" text="Em Fase de teste" textFill="#2981f5">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

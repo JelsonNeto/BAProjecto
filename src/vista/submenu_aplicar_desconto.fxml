@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.0" prefWidth="543.0" style="-fx-background-color: white; -fx-border-color: #006699;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.Submenu_aplicar_descontoController">
+   <children>
+      <Pane prefHeight="72.0" prefWidth="543.0" style="-fx-background-color: #006699; -fx-border-color: white;">
+         <children>
+            <Label layoutX="7.0" layoutY="19.0" text="Aplicação de Desconto" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Pane layoutX="499.0" layoutY="5.0" onMouseClicked="#Close" prefHeight="39.0" prefWidth="44.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/apagar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="161.0" layoutY="251.0" onAction="#Aplicar" prefHeight="49.0" prefWidth="230.0" style="-fx-background-color: #006699;" text="Aplicar" textFill="WHITE" />
+      <Label layoutX="300.0" layoutY="83.0" text="Ano lectivo:" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_ano" layoutX="390.0" layoutY="86.0" text="Label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="131.0" text="Desconto:" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="192.0" text="Motivo:" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_motivo" layoutX="150.0" layoutY="190.0" prefHeight="25.0" prefWidth="292.0" promptText="Porque aplicou o Bonus?" />
+      <JFXTextField fx:id="txt_desconto" layoutX="150.0" layoutY="131.0" onKeyTyped="#verifica_dados" prefHeight="25.0" prefWidth="292.0" promptText="Adicione o valor do bonus( numero inteiro )" />
+      <Label fx:id="lbl_erro_desconto" layoutX="152.0" layoutY="160.0" prefHeight="17.0" prefWidth="155.0" text="Apenas valores numericos." textFill="#ff2b2b" visible="false" />
+      <Label layoutX="35.0" layoutY="83.0" text="Funcionario:" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nome" layoutX="129.0" layoutY="86.0" text="lbl" textFill="#d31f5e">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

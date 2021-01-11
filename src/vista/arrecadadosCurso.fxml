@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="973.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.ArrecadadosCursoController">
+   <children>
+      <Label layoutX="14.0" layoutY="22.0" text="Receita -  por Curso ">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="184.0" text="Confirmação" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="223.0" text="Valor:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="275.0" text="Mensalidade ( Propina )" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="321.0" text="Valor:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="393.0" text="Valor Total" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="432.0" text="Valor:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="5.0" layoutY="79.0" prefHeight="4.0" prefWidth="960.0" />
+      <Label layoutX="700.0" layoutY="51.0" text="Seleção do Curso" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_curso" layoutX="690.0" layoutY="103.0" onAction="#SelecionaCurso_InicializaClasse" prefHeight="44.0" prefWidth="180.0" promptText="Selecione o Curso" />
+      <Label fx:id="total_confirmacao" layoutX="171.0" layoutY="223.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="total_propina" layoutX="175.0" layoutY="321.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="total_geral" layoutX="183.0" layoutY="432.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="700.0" layoutY="421.0" text="Ano Lectivo:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_ano" layoutX="846.0" layoutY="422.0">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="94.0" text="Matricula" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="133.0" text="Valor:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="total_matricula" layoutX="169.0" layoutY="133.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

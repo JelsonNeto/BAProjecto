@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="993.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.FinanceiroAnualController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="31.0" prefHeight="497.0" prefWidth="965.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Extracto de Pagamento">
+            <content>
+                <fx:include source="extractoAnual.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Receita por Curso">
+            <content>
+                <fx:include source="arrecadadosCurso.fxml" />
+            </content>
+          </Tab>
+           <Tab text="Receita por Classe">
+            <content>
+                <fx:include source="arrecadadosClasse.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Receita Geral">
+              <content>
+                <fx:include source="ReceitaAnual.fxml" />
+              </content>
+            </Tab>
+            <Tab text="Dispesas - por Função">
+              <content>
+                <fx:include source="Dispesas.fxml" />
+              </content>
+            </Tab>
+            <Tab text="Outras dispesas">
+              <content>
+                <fx:include source="outrasDispesas.fxml" />
+              </content>
+            </Tab>
+            <Tab text="Dispesa Geral">
+              <content>
+                <fx:include source="DispesaAnual.fxml" />
+              </content>
+            </Tab>
+            <Tab text="Receitas e Dispesas">
+              <content>
+                <fx:include source="ComparacaoArrecadados_dispesas_anual.fxml" />
+              </content>
+            </Tab>
+            <Tab text="Lucros">
+              <content>
+                  <fx:include source="Ver_lucro_receitas.fxml" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutX="943.0" layoutY="3.0" onMouseClicked="#AbirInfo" prefHeight="26.0" prefWidth="44.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="11.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/informacao.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="897.0" layoutY="-1.0" onMouseClicked="#back" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="23.0" fitWidth="31.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Seta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

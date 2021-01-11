@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="663.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Usuario.loginControler">
+   <children>
+      <Pane prefHeight="578.0" prefWidth="240.0" style="-fx-background-color: #006699;">
+         <children>
+            <Label fx:id="txt_tipo" layoutX="34.0" layoutY="143.0" text="Complexo escolar" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="txt_escola" layoutX="21.0" layoutY="178.0" text="Francisco Cuaha Bige" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutY="56.0" prefHeight="12.0" prefWidth="240.0" style="-fx-background-color: white;" />
+            <Label layoutX="67.0" layoutY="21.0" text="Entrar" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="foto_logo" fitHeight="229.0" fitWidth="167.0" layoutX="27.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/logoEscola.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="principal" layoutX="240.0" layoutY="1.0" prefHeight="578.0" prefWidth="425.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="1016.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.VisualizarPagamentoController">
+    <stylesheets>
+        <URL value="@/estilos/visualizarpagamento.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="4.0" layoutY="28.0" text="Visualizar Pagamentos" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" disable="true" layoutX="5.0" layoutY="70.0" onMouseClicked="#TabelaClicada" prefHeight="458.0" prefWidth="806.0">
+        <columns>
+          <TableColumn fx:id="coluna_nome" prefWidth="96.0" text="Nome do Aluno" />
+          <TableColumn fx:id="coluna_bi" prefWidth="54.0" text="Bi" />
+            <TableColumn fx:id="coluna_curso" prefWidth="54.0" text="Curso" />
+            <TableColumn fx:id="coluna_turma" prefWidth="54.0" text="Turma" />
+            <TableColumn fx:id="coluna_efeito" prefWidth="54.0" text="Efeito" />
+            <TableColumn fx:id="coluna_preco" prefWidth="54.0" text="Preço" />
+            <TableColumn fx:id="coluna_pago" prefWidth="71.0" text="Valor Pago" />
+            <TableColumn fx:id="coluna_mes" prefWidth="96.0" text="Mês referente" />
+            <TableColumn fx:id="coluna_data" prefWidth="138.0" text="Data do Pagamento" />
+            <TableColumn fx:id="coluna_funcionario" prefWidth="134.0" text="Funcionario" />
+        </columns>
+      </TableView>
+      <Button fx:id="actualizar" disable="true" layoutX="827.0" layoutY="261.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="50.0" prefWidth="185.0" styleClass="botoes" stylesheets="@../estilos/visualizarpagamento.css" text="Actualizar" />
+      <Separator layoutX="816.0" layoutY="238.0" prefHeight="1.0" prefWidth="206.0" />
+      <Label layoutX="872.0" layoutY="204.0" text="Operações">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="867.0" layoutY="102.0" text="Carregar Tabela" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_pesquisa" layoutX="564.0" layoutY="37.0" prefHeight="25.0" prefWidth="206.0" promptText="Digite o que deseja visualizar" />
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="836.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir1.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="778.0" layoutY="27.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="884.0" layoutY="489.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="2.0" onMouseClicked="#PreviuosDados" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/prev-icon-pngsmall-12.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="929.0" layoutY="489.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="2.0" onMouseClicked="#NextDados" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/next-icon-pngsmall-12.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="846.0" layoutY="140.0" onAction="#CarregarTabela" prefHeight="50.0" prefWidth="151.0" style="-fx-background-color: #006699;" text="Carregar Tabela" textFill="WHITE" />
+      <JFXComboBox fx:id="cb_opcoesPesquisa" layoutX="353.0" layoutY="37.0" prefHeight="25.0" prefWidth="197.0" promptText="Selecione a opção" />
+      <Pane layoutX="928.0" layoutY="9.0" onMouseClicked="#back" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="23.0" fitWidth="31.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Seta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btn_recibo" buttonType="RAISED" disable="true" layoutX="827.0" layoutY="319.0" onAction="#GerarRecibo" prefHeight="50.0" prefWidth="185.0" style="-fx-background-color: #006699;" text="Recibo de Pagamento" textFill="WHITE" />
+      <JFXBadge layoutX="820.0" layoutY="330.0" prefHeight="32.0" prefWidth="39.0">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/images%20(2.1)%20-%20Copia.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </JFXBadge>
+      <JFXButton fx:id="btn_detalhes" buttonType="RAISED" disable="true" layoutX="827.0" layoutY="376.0" onAction="#verInformacoes" prefHeight="50.0" prefWidth="185.0" style="-fx-background-color: #006699;" text="Detalhes do Pagamento" textFill="WHITE" />
+      <JFXBadge layoutX="825.0" layoutY="391.0" prefHeight="25.0" prefWidth="30.0">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/1496637751.png" />
+               </image>
+            </ImageView>
+         </children>
+      </JFXBadge>
+      <JFXButton fx:id="Eliminar" buttonType="RAISED" disable="true" layoutX="826.0" layoutY="432.0" onAction="#Eliminar" prefHeight="50.0" prefWidth="185.0" style="-fx-background-color: #006699;" text="Eliminar" textFill="WHITE" />
+      <JFXBadge layoutX="831.0" layoutY="445.0" prefHeight="25.0" prefWidth="30.0">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/apagar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </JFXBadge>
+   </children>
+</AnchorPane>

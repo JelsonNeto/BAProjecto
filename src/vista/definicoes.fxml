@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="1050.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Usuario.DefinicoesController">
+   <children>
+      <ImageView fitHeight="80.0" fitWidth="81.0" layoutX="24.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/imagesSett.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="104.0" layoutY="33.0" text="Definições" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutY="101.0" prefHeight="7.0" prefWidth="1050.0" style="-fx-background-color: #006699;" />
+      <Label layoutX="104.0" layoutY="65.0" text="Configure o seu sistema aqui">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="menuUsuario" disable="true" layoutX="98.0" layoutY="118.0" onMouseClicked="#showUsuario" styleClass="menu" stylesheets="@../estilos/definicoes.css" text="Usuarios">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="565.0" layoutY="120.0" onMouseClicked="#showEspecificacoes" styleClass="menu" stylesheets="@../estilos/definicoes.css" text="Especificações do sistema">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="837.0" layoutY="121.0" onMouseClicked="#showsobreAutor" styleClass="menu" stylesheets="@../estilos/definicoes.css" text="Sobre o autor">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Pane fx:id="principal" layoutX="13.0" layoutY="165.0" prefHeight="489.0" prefWidth="1017.0" />
+      <Label fx:id="lbl_registro" layoutX="207.0" layoutY="119.0" onMouseClicked="#showregistro" styleClass="menu" stylesheets="@../estilos/definicoes.css" text="Registro">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label fx:id="menuBackup" layoutX="320.0" layoutY="119.0" onMouseClicked="#showbackup" styleClass="menu" stylesheets="@../estilos/definicoes.css" text="Backup">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label fx:id="menuConfiguracao" layoutX="421.0" layoutY="120.0" onMouseClicked="#showconfig" styleClass="menu" stylesheets="@../estilos/definicoes.css" text="Configuração">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+   </children>
+</AnchorPane>

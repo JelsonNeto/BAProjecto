@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Boletim.EmitirBoletin_turmaController">
+   <children>
+      <Label layoutX="28.0" layoutY="5.0" text="Emitir Boletin - Por Turma" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="27.0" layoutY="56.0" prefHeight="448.0" prefWidth="784.0">
+        <columns>
+            <TableColumn fx:id="coluna_estudante" minWidth="2.0" prefWidth="324.0" text="Estudantes inscritos na Turma" />
+            <TableColumn fx:id="coluna_curso" minWidth="2.0" prefWidth="107.0" text="Curso" />
+            <TableColumn fx:id="coluna_classe" minWidth="2.0" prefWidth="114.0" text="Classe" />
+            <TableColumn fx:id="coluna_turma" minWidth="2.0" prefWidth="113.0" text="Turma" />
+            <TableColumn fx:id="coluna_trimestre" minWidth="2.0" prefWidth="125.0" text="Trimestre" />
+        </columns>
+      </TableView>
+      <Label layoutX="29.0" layoutY="31.0" text="Emita os boletins de notas de cada turma">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="840.0" layoutY="96.0" text="Seleção de Dados" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="813.0" layoutY="131.0" prefHeight="3.0" prefWidth="198.0" />
+      <JFXComboBox fx:id="cb_curso" focusColor="#006699" layoutX="828.0" layoutY="167.0" onAction="#selecionacurso_inicializaClasse" prefHeight="25.0" prefWidth="169.0" promptText="Selecione o curso" />
+      <JFXComboBox fx:id="cb_classe" focusColor="#006699" layoutX="828.0" layoutY="223.0" onAction="#selecionaClasse_inicializaturma" prefHeight="25.0" prefWidth="169.0" promptText="Selecione a classe" />
+      <JFXComboBox fx:id="cb_turma" focusColor="#006699" layoutX="828.0" layoutY="279.0" onAction="#SelecionaTurma_incializaTrimestre" prefHeight="25.0" prefWidth="169.0" promptText="Selecione a turma" />
+      <JFXButton fx:id="btn_emitir" buttonType="RAISED" layoutX="827.0" layoutY="394.0" onAction="#EmitirBoletim" prefHeight="62.0" prefWidth="176.0" ripplerFill="#ebe3e3" style="-fx-background-color: #006699;" text="Emitir Boletin" textFill="#f5f5f5" />
+      <Label layoutX="830.0" layoutY="481.0" text="Total:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="888.0" layoutY="481.0" text="2 Registros">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="827.0" layoutY="4.0" text="Ano Lectivo:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="947.0" layoutY="4.0" text="2020">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_trimestre" focusColor="#006699" layoutX="826.0" layoutY="333.0" onAction="#SelecionaTrimestre_Tabela" prefHeight="25.0" prefWidth="169.0" promptText="Selecione o trimestre" />
+      <JFXBadge layoutX="835.0" layoutY="403.0" prefHeight="41.0" prefWidth="42.0">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Impirmir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </JFXBadge>
+   </children>
+</AnchorPane>

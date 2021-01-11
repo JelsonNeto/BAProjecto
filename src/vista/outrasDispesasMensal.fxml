@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="973.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.OutrasDispesasMensalController">
+   <children>
+      <Label layoutX="24.0" layoutY="17.0" text="Outras dispesas ">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="24.0" layoutY="66.0" prefHeight="346.0" prefWidth="937.0">
+        <columns>
+          <TableColumn fx:id="coluna_dispesa" prefWidth="445.0" text="Descrição da dispesa" />
+          <TableColumn fx:id="coluna_valor" prefWidth="126.0" text="Valor" />
+            <TableColumn fx:id="coluna_data" prefWidth="174.0" text="Data de ocorrência" />
+            <TableColumn fx:id="coluna_funcioario" prefWidth="191.0" text="Funcionario Encarregado" />
+        </columns>
+      </TableView>
+      <Separator layoutY="57.0" prefHeight="4.0" prefWidth="973.0" />
+      <JFXComboBox fx:id="cb_anolectivo" layoutX="733.0" layoutY="24.0" onAction="#Seleciona_Ano_inicializaCampos" prefHeight="25.0" prefWidth="225.0" promptText="Selecione o ano Lectivo" />
+      <Label layoutX="317.0" layoutY="430.0" text="Valor total:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_mes" layoutX="487.0" layoutY="24.0" onAction="#Seleciona_mes_inicializaAno" prefHeight="25.0" prefWidth="225.0" promptText="Selecione o mês" />
+      <Label fx:id="txt_total" layoutX="451.0" layoutY="435.0" prefHeight="23.0" prefWidth="165.0" textFill="#1b1b1b">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="924.0" layoutY="-2.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Imprimir" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Impirmir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="1050.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.PagamentoController">
+    <stylesheets>
+        <URL value="@/estilos/pagamento.css" />
+    </stylesheets>
+   <children>
+      <Separator layoutY="91.0" prefHeight="7.0" prefWidth="1050.0" style="-fx-background-color: #006699;" />
+      <ImageView fitHeight="68.0" fitWidth="77.0" layoutX="26.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/images%20(5).jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbl_titulo_pagamento" layoutX="113.0" layoutY="21.0" text="Área de Finanças">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="53.0" text="Veja as informações dos pagamentos aqui">
+         <font>
+            <Font name="Segoe UI" size="11.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pprincipal" layoutX="17.0" layoutY="115.0" prefHeight="545.0" prefWidth="1016.0">
+         <children>
+            <Pane fx:id="principal" layoutX="-7.0" prefHeight="545.0" prefWidth="1024.0" />
+         </children></Pane>
+   </children>
+</AnchorPane>

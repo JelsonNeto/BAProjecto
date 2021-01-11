@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Emissao.EmitircertificadosController">
+   <children>
+      <Label layoutX="21.0" layoutY="19.0" text="Emissão de Certificados" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_curso" layoutX="450.0" layoutY="58.0" onAction="#SelecionaOCurso_InicializaClasse" prefHeight="25.0" prefWidth="141.0" promptText="Selecione o  curso" />
+      <ComboBox fx:id="cb_turma" layoutX="743.0" layoutY="59.0" onAction="#SelecionaTurmaInicializarAno" prefHeight="25.0" prefWidth="141.0" promptText="Selecione a turma" />
+      <ComboBox fx:id="cb_classe" layoutX="596.0" layoutY="59.0" onAction="#SelecionaClasse_InicializaTurma" prefHeight="25.0" prefWidth="141.0" promptText="Selecione a classe" />
+      <Label layoutX="450.0" layoutY="23.0" text="Selecione os dados do aluno" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_ano" layoutX="891.0" layoutY="59.0" onAction="#SelecionaAno_InicializaAluno" prefHeight="25.0" prefWidth="117.0" promptText="Ano lectivo" />
+      <Label layoutX="18.0" layoutY="94.0" styleClass="TextosCor" stylesheets="@../estilos/efectuarpagamento.css" text="Estudante:">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="5.0" layoutY="123.0" prefHeight="4.0" prefWidth="1009.0" />
+      <TableView fx:id="tabela" layoutX="15.0" layoutY="139.0" prefHeight="356.0" prefWidth="986.0">
+        <columns>
+          <TableColumn fx:id="coluna_disciplina" prefWidth="150.0" text="Disciplina" />
+          <TableColumn fx:id="coluna_professor" minWidth="0.0" prefWidth="179.0" text="Professor" />
+            <TableColumn fx:id="coluna_cap" minWidth="0.0" prefWidth="179.0" text="CAP" />
+            <TableColumn fx:id="coluna_ce" minWidth="0.0" prefWidth="179.0" text="CE" />
+            <TableColumn fx:id="coluna_cf" minWidth="0.0" prefWidth="298.0" text="CF" />
+        </columns>
+      </TableView>
+      <Label layoutX="21.0" layoutY="508.0" text="Classificação:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="356.0" layoutY="508.0" text="Média Geral:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="764.0" layoutY="501.0" mnemonicParsing="false" onAction="#emitir" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Emitir Certificado" textFill="WHITE" />
+      <ImageView fitHeight="32.0" fitWidth="53.0" layoutX="790.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/Impirmir.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cb_nome" layoutX="98.0" layoutY="80.0" onAction="#selecionaAluno_InicializaTabela" prefHeight="42.0" prefWidth="277.0" promptText="Selecione o  estudante" />
+      <Label fx:id="lbl_classificacao" layoutX="134.0" layoutY="509.0" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

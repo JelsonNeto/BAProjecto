@@ -1,0 +1,31 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+    -fx-background-color: white;
+}
+
+.pcabecalho
+{
+    -fx-background-color: #006699;
+}
+
+.Pane
+{
+    -fx-background-color: #ffffff;
+}
+.Pane2:target
+{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #006699;
+}
+.Textos:hover
+{
+    -fx-underline: true;
+}
+
+.opcoesMenu:hover{
+    -fx-background-color: #cccccc;
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Notas.LancarminipautaController">
+   <children>
+      <Label layoutX="28.0" layoutY="9.0" text="Lançar Mini-Pauta" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="27.0" layoutY="48.0" prefHeight="404.0" prefWidth="790.0">
+        <columns>
+          <TableColumn fx:id="coluna_numeracao" prefWidth="79.0" text="Numeração" />
+          <TableColumn fx:id="coluna_nome" prefWidth="280.0" text="Nome do Estudante" />
+            <TableColumn fx:id="coluna_mac" prefWidth="138.0" text="MAC" />
+            <TableColumn fx:id="coluna_cp" prefWidth="146.0" text="CPP" />
+            <TableColumn fx:id="coluna_ct" prefWidth="146.0" text="CT" />
+        </columns>
+      </TableView>
+      <Label layoutX="842.0" layoutY="99.0" text="Seleção de Dados" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="771.0" layoutY="14.0" prefHeight="32.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/pagamento.css" />
+      <Separator layoutX="821.0" layoutY="134.0" prefHeight="3.0" prefWidth="198.0" />
+      <Label layoutX="34.0" layoutY="454.0" text="Nome do Professor:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nomeProfessor" layoutX="209.0" layoutY="454.0" text="Jelson Neto">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="453.0" text="Total:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="389.0" layoutY="454.0" text="50 Registros">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="859.0" layoutY="14.0" text="Ano Lectivo:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_anolectivo" layoutX="966.0" layoutY="14.0" text="2019">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="626.0" layoutY="456.0" onAction="#LancarMinipauta" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #006699;" text="Lançar Pauta" textFill="WHITE" />
+      <JFXBadge layoutX="630.0" layoutY="459.0" prefHeight="32.0" prefWidth="49.0">
+         <children>
+            <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/if_plus_1772631.png" />
+               </image>
+            </ImageView>
+         </children>
+      </JFXBadge>
+      <JFXComboBox fx:id="cb_curso" focusColor="#006699" layoutX="842.0" layoutY="158.0" onAction="#selecionacurso_inicializaClasse" prefHeight="25.0" prefWidth="169.0" promptText="Selecione o curso" />
+      <JFXComboBox fx:id="cb_classe" focusColor="#006699" layoutX="842.0" layoutY="202.0" onAction="#selecionaClasse_inicializaturma" prefHeight="25.0" prefWidth="169.0" promptText="Selecione a classe" />
+      <JFXComboBox fx:id="cb_turma" focusColor="#006699" layoutX="842.0" layoutY="253.0" onAction="#SelecionaTurma_incializaTrimestre" prefHeight="25.0" prefWidth="169.0" promptText="Selecione a turma" />
+      <JFXComboBox fx:id="cb_disciplina" focusColor="#006699" layoutX="842.0" layoutY="405.0" onAction="#selecionaDisciplina_inicializaTabela" prefHeight="25.0" prefWidth="169.0" promptText="Selecione a disciplina" />
+      <Label layoutX="871.0" layoutY="359.0" text="Disciplinas" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="821.0" layoutY="392.0" prefHeight="3.0" prefWidth="198.0" />
+      <JFXComboBox fx:id="cb_trimestre" focusColor="#006699" layoutX="842.0" layoutY="308.0" onAction="#SelecionaTrimestre_inicializaDisciplina" prefHeight="25.0" prefWidth="169.0" promptText="Selecione o trimestre" />
+      <Label fx:id="lbl_erro" layoutX="192.0" layoutY="477.0" text="Existem Campos vazios" textFill="#ee1717">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

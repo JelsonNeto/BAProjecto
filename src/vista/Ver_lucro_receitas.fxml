@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="973.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.Ver_Lucros_receitasController">
+   <children>
+      <Label layoutX="14.0" layoutY="22.0" text="Ver Receitas ou Lucros - Anual">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="5.0" layoutY="66.0" prefHeight="4.0" prefWidth="960.0" />
+      <JFXComboBox fx:id="cb_ano" layoutX="723.0" layoutY="34.0" onAction="#SelecionaAno_InicializaCampos" prefHeight="25.0" prefWidth="225.0" promptText="Selecione o ano Lectivo" />
+      <LineChart fx:id="grafico" alternativeColumnFillVisible="true" layoutX="492.0" layoutY="74.0" prefHeight="355.0" prefWidth="475.0" title="Grafico de Lucros">
+        <xAxis>
+          <CategoryAxis fx:id="g_x" label="Meses" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="g_y" label="Lucros" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <TableView fx:id="tabela" layoutX="9.0" layoutY="96.0" prefHeight="329.0" prefWidth="442.0">
+        <columns>
+          <TableColumn fx:id="coluna_mes" prefWidth="110.0" text="Mês" />
+            <TableColumn fx:id="coluna_receita" prefWidth="126.0" text="Receita" />
+            <TableColumn fx:id="coluna_dispesa" prefWidth="96.0" text="Dispesa" />
+            <TableColumn fx:id="coluna_lucro" prefWidth="96.0" text="Lucro" />
+        </columns>
+      </TableView>
+      <Pane layoutX="928.0" layoutY="-2.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Imprimir" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Impirmir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="19.0" layoutY="427.0" text="Receita total:" textFill="#004466">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="451.0" text="Dispesa total:" textFill="#004466">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="551.0" layoutY="450.0" text="Lucro  total:" textFill="#004466">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="560.0" layoutY="425.0" text="Prejuizo:" textFill="#004466">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_dis" layoutX="97.0" layoutY="453.0" prefHeight="13.0" prefWidth="154.0">
+         <font>
+            <Font name="Segoe UI Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_re" layoutX="95.0" layoutY="429.0" prefHeight="13.0" prefWidth="166.0">
+         <font>
+            <Font name="Segoe UI Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_lu" layoutX="622.0" layoutY="453.0" prefHeight="13.0" prefWidth="333.0">
+         <font>
+            <Font name="Segoe UI Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_p" layoutX="611.0" layoutY="427.0" prefHeight="13.0" prefWidth="353.0">
+         <font>
+            <Font name="Segoe UI Bold" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

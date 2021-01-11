@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="600.0" prefWidth="700.0" style="-fx-border-color: #006699;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dialogos.Controlador.MinipautaAjudaController">
+   <header>
+      <Pane prefHeight="43.0" prefWidth="698.0" style="-fx-background-color: #006699; -fx-border-color: white;">
+         <children>
+            <Label layoutX="36.0" layoutY="7.0" text="Mini - Pauta - Ajuda" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="23.0" fitWidth="54.0" layoutX="663.0" layoutY="3.0" onMouseClicked="#Close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/apagar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </header>
+   <graphic>
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+   </graphic>
+   <content>
+      <Pane prefHeight="522.0" prefWidth="698.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="3.0" layoutY="37.0" text="Seleção dos Campos" textFill="#006699" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="9.0" text="Seja bem vindo a janela de ajudan para a emissão das Mini Pautas, Lhe explicaremos como emiti-las." textFill="#110000">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </content>
+</DialogPane>

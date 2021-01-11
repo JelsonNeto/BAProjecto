@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #006699;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Menus.LoadingController">
+   <children>
+      <ImageView fitHeight="144.0" fitWidth="114.0" layoutX="311.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/164954.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="87.0" layoutY="133.0" text="Complexo Escolar " textFill="#eeeeee">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="144.0" layoutY="177.0" text="Genix" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="468.0" layoutY="332.0" text="Software de gestão" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="497.0" layoutY="349.0" text="vers 1.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="144.0" layoutY="264.0" text="Carregando..." textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="13.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="pb" layoutX="144.0" layoutY="291.0" prefHeight="18.0" prefWidth="286.0" progress="0.0" />
+   </children>
+</AnchorPane>

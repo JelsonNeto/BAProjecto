@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="1040.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Notas.VerNotasController">
+   <children>
+      <Label layoutX="9.0" layoutY="14.0" style="-fx-text-fill: #006699;" text="Visualização das Notas">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="248.0" layoutY="48.0" prefHeight="401.0" prefWidth="745.0">
+        <columns>
+          <TableColumn fx:id="coluna_disciplina" prefWidth="192.0" text="Disciplina" />
+          <TableColumn fx:id="coluna_professor" prefWidth="213.0" text="Professor" />
+            <TableColumn fx:id="coluna_mac" prefWidth="96.0" text="MAC" />
+            <TableColumn fx:id="coluna_cp" prefWidth="119.0" text="CP" />
+            <TableColumn fx:id="coluna_ct" prefWidth="124.0" text="CT" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="88.0" text="Dados do Aluno">
+         <font>
+            <Font name="Segoe UI" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="142.0" text="Nome">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="178.0" text="Curso">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="221.0" text="Classe">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="259.0" text="Turno">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nome" editable="false" layoutX="58.0" layoutY="139.0" prefHeight="30.0" prefWidth="183.0" />
+      <TextField fx:id="txt_curso" editable="false" layoutX="57.0" layoutY="175.0" prefHeight="30.0" prefWidth="183.0" />
+      <TextField fx:id="txt_classe" editable="false" layoutX="57.0" layoutY="218.0" prefHeight="30.0" prefWidth="183.0" />
+      <TextField fx:id="txt_turno" editable="false" layoutX="57.0" layoutY="256.0" prefHeight="30.0" prefWidth="183.0" />
+      <ComboBox fx:id="cb_ano" layoutX="54.0" layoutY="346.0" onAction="#SelecionaAno" prefHeight="43.0" prefWidth="177.0" promptText="Selecione o Ano lectivo" />
+      <ComboBox fx:id="cb_trimestre" layoutX="55.0" layoutY="401.0" onAction="#SelecionaTrimestre" prefHeight="43.0" prefWidth="177.0" promptText="Selecione o trimestre" />
+      <Separator layoutX="9.0" layoutY="330.0" prefHeight="7.0" prefWidth="237.0" />
+      <Label layoutX="14.0" layoutY="302.0" text="Filtrar Dados">
+         <font>
+            <Font name="Segoe UI" size="23.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_pesquisa" layoutX="418.0" layoutY="19.0" onAction="#SelectOpcao" prefWidth="150.0" promptText="Selecione o campo" />
+      <Label layoutX="587.0" layoutY="23.0" text="Pesquisar" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_pesquisa" layoutX="657.0" layoutY="19.0" prefHeight="25.0" prefWidth="210.0" promptText="Digite o que quer Pesquisar aqui" />
+      <Pane layoutX="866.0" layoutY="13.0" prefHeight="32.0" prefWidth="44.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="5.0" layoutY="2.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="988.0" layoutY="5.0" prefHeight="32.0" prefWidth="44.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="32.0" layoutX="7.0" layoutY="4.0" onMouseClicked="#Back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Seta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="10.0" layoutY="457.0" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Emitir Dec sem notas" textFill="#1f7fae">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="258.0" layoutY="455.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="15.0" />
+      <Label layoutX="268.0" layoutY="457.0" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Emitir Dec com notas" textFill="#1f7fae">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

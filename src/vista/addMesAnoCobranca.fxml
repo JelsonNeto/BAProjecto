@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="892.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Preco.AddMesAnoCobrancaController">
+   <children>
+      <Label layoutX="25.0" layoutY="30.0" prefHeight="24.0" prefWidth="276.0" text="Adiciona Mês/ Ano de cobrança" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_mes" disable="true" layoutX="143.0" layoutY="182.0" prefHeight="30.0" prefWidth="196.0" promptText="Insira o mês" />
+      <TextField fx:id="txt_ano" disable="true" layoutX="144.0" layoutY="238.0" prefHeight="30.0" prefWidth="196.0" promptText="Insira o ano" />
+      <Label layoutX="58.0" layoutY="92.0" text="Selecione o que pretende adicionar">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_opcao" layoutX="143.0" layoutY="127.0" onAction="#SelecionaOpcao_VisualizaMes_Ano" prefHeight="30.0" prefWidth="196.0" promptText="Selecione a opção" />
+      <Label layoutX="58.0" layoutY="186.0" text="Mês">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="242.0" text="Ano">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="131.0" text="Opção">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="146.0" layoutY="349.0" mnemonicParsing="false" onAction="#Adicionar_MesAno" prefHeight="45.0" prefWidth="196.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Adicionar" textFill="WHITE" />
+      <Button layoutX="500.0" layoutY="313.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="124.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Actualizar" textFill="WHITE" />
+      <TableView fx:id="tabela" layoutX="421.0" layoutY="96.0" prefHeight="203.0" prefWidth="448.0">
+        <columns>
+          <TableColumn fx:id="coluna_mes" prefWidth="168.0" text="Mês" />
+          <TableColumn fx:id="coluna_ano" prefWidth="130.0" text="Ano" />
+            <TableColumn fx:id="coluna_dia_multa" prefWidth="149.0" text="Dia limite de multa" />
+        </columns>
+      </TableView>
+      <Button disable="true" layoutX="745.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="124.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Editar" textFill="WHITE" />
+      <Button layoutX="651.0" layoutY="313.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="124.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Eliminar" textFill="WHITE" />
+      <TextField fx:id="txt_dia_multa" disable="true" layoutX="142.0" layoutY="287.0" prefHeight="30.0" prefWidth="196.0" promptText="Insira o dia" />
+      <Label layoutX="56.0" layoutY="291.0" text="Dia multa">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

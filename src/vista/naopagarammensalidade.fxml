@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="970.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.NaopagarammensalidadeController">
+   <children>
+      <Label layoutX="17.0" layoutY="14.0" text="Propinas não pagas - na Turma">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="14.0" layoutY="54.0" prefHeight="377.0" prefWidth="797.0">
+         <columns>
+            <TableColumn fx:id="coluna_aluno" prefWidth="271.0" text="Nome do Aluno" />
+            <TableColumn fx:id="coluna_classe" minWidth="0.0" prefWidth="164.0" text="Classe" />
+            <TableColumn fx:id="coluna_turma" minWidth="9.0" prefWidth="90.0" text="Turma" />
+            <TableColumn fx:id="coluna_curso" prefWidth="137.0" text="Curso" />
+            <TableColumn fx:id="coluna_valor" prefWidth="132.0" text="Valor" />
+         </columns>
+      </TableView>
+      <Label layoutX="334.0" layoutY="436.0" text="Total:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_total" layoutX="407.0" layoutY="439.0">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="850.0" layoutY="358.0" onMouseClicked="#PreviuosDados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/prev-icon-pngsmall-12.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="890.0" layoutY="359.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="2.0" onMouseClicked="#NextDados" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/next-icon-pngsmall-12.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXComboBox fx:id="cb_curso" layoutX="818.0" layoutY="164.0" onAction="#SelecionaCurso_InicializaClassePagaram" prefHeight="25.0" prefWidth="147.0" promptText="Selecione o Curso" />
+      <JFXComboBox fx:id="cb_classe" layoutX="817.0" layoutY="208.0" onAction="#SelecionaClasse_InicializaTurmaPagaram" prefHeight="25.0" prefWidth="147.0" promptText="Selecione o Classe" />
+      <JFXComboBox fx:id="cb_turma" layoutX="817.0" layoutY="257.0" onAction="#selecionaTurma_InicializaMesNaoPagaram" prefHeight="25.0" prefWidth="147.0" promptText="Selecione o Turma" />
+      <JFXComboBox fx:id="cb_mes" layoutX="585.0" layoutY="24.0" onAction="#AlunosNaoPagaram" prefHeight="25.0" prefWidth="224.0" promptText="Selecione o mês" />
+      <Pane layoutX="917.0" layoutY="3.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Imprimir" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Impirmir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

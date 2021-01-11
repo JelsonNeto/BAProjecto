@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="365.0" prefWidth="903.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Usuario.VisualizarUsuario2Controller">
+   <children>
+      <Label layoutX="28.0" layoutY="14.0" text="Visualizar" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="28.0" layoutY="38.0" prefHeight="310.0" prefWidth="717.0">
+        <columns>
+          <TableColumn fx:id="coluna_nome" editable="false" prefWidth="104.0" text="Nome " />
+          <TableColumn fx:id="coluna_sexo" prefWidth="78.0" text="Sexo" />
+            <TableColumn fx:id="coluna_datanas" prefWidth="135.0" text="Data de Nascimento" />
+            <TableColumn fx:id="coluna_tipo" prefWidth="127.0" text="Tipo de Usuario" />
+            <TableColumn fx:id="coluna_foto" prefWidth="124.0" text="Fotografia" />
+            <TableColumn fx:id="coluna_username" prefWidth="148.0" text="Username" />
+        </columns>
+      </TableView>
+      <Button layoutX="750.0" layoutY="141.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="148.0" style="-fx-background-color: #006699;" text="Actualizar" textFill="WHITE" />
+      <Button layoutX="750.0" layoutY="197.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="43.0" prefWidth="148.0" style="-fx-background-color: #006699;" text="Eliminar" textFill="WHITE" />
+      <Label layoutX="447.0" layoutY="14.0" text="Pesquisar" />
+      <TextField fx:id="txt_pesquisar" layoutX="512.0" layoutY="10.0" prefHeight="25.0" prefWidth="193.0" promptText="Digite o que deseja pesquisar" />
+      <Label layoutX="763.0" layoutY="53.0" text="Pesquisar por" textFill="#006699">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_pesquisar" layoutX="749.0" layoutY="81.0" prefWidth="150.0" promptText="selecione a opção" />
+      <Pane layoutX="705.0" layoutY="4.0" prefHeight="36.0" prefWidth="34.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#PesquisarPor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

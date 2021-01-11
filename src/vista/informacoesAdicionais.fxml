@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="1028.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="Controlador.Rh.InformacoesAdicionaisController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="43.0" prefHeight="462.0" prefWidth="1007.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dados dos funcionários">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="14.0" layoutY="8.0" text="Informações Adicionais" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="993.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="22.0" layoutY="7.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Estatistica de Notas" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="35.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Veja o indice de positivas e negativas aqui.">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="27.0" layoutY="61.0" prefHeight="443.0" prefWidth="953.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Estatistica por Turma">
+              <content>
+                  <fx:include source="estatiscaTurma.fxml" />
+              </content>
+          </Tab>
+           
+          <Tab text="Estatistica por Classe">
+            <content>
+                <fx:include source="estatisticaClasse.fxml"/>
+            </content>
+          </Tab>
+            <Tab text="Estatistica por Curso">
+               <content>
+                   <fx:include source="estatiscaCurso.fxml"/>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

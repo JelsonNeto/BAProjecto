@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-color: #006699;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.Submenu_actualizar_tabela_devedorController">
+   <children>
+      <Pane prefHeight="72.0" prefWidth="467.0" style="-fx-background-color: #006699; -fx-border-color: white;">
+         <children>
+            <Label layoutX="7.0" layoutY="22.0" text="Actualizar Tabela de Devedores" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Pane layoutX="409.0" layoutY="7.0" onMouseClicked="#Close" prefHeight="39.0" prefWidth="44.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/apagar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="33.0" layoutY="85.0" text="Selecione os dados" underline="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_curso" layoutX="33.0" layoutY="143.0" onAction="#SelecionaCurso_InicializaClasse" prefHeight="28.0" prefWidth="181.0" promptText="Selecione o curso( nível )" />
+      <ComboBox fx:id="cb_classe" layoutX="234.0" layoutY="143.0" onAction="#SelecionaClasse_PreparaDados" prefHeight="28.0" prefWidth="199.0" promptText="Selecione a classe" />
+      <JFXButton buttonType="RAISED" layoutX="120.0" layoutY="202.0" onAction="#Actualizar" prefHeight="49.0" prefWidth="230.0" style="-fx-background-color: #006699;" text="Actualizar" textFill="WHITE" />
+      <Label layoutX="295.0" layoutY="75.0" text="Ano lectivo:" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_ano" layoutX="390.0" layoutY="76.0" text="Label">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

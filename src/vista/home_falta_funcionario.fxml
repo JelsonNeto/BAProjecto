@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Home.Home_falta_funcionarioController">
+   <children>
+      <Label layoutX="10.0" layoutY="5.0" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Gestão de Faltas - Funcionários" textFill="#006699" underline="true">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_funcao" layoutX="35.0" layoutY="70.0" onAction="#SelecionaFuncao_InicializaNomes" prefHeight="25.0" prefWidth="306.0" promptText="Selecione a função" />
+      <Label layoutX="28.0" layoutY="155.0" text="Nome Funcionario:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="235.0" text="Bi_Cédula:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="322.0" text="Data:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_nome" layoutX="173.0" layoutY="152.0" onAction="#SelecionaNomes_InicializaBi" prefHeight="25.0" prefWidth="239.0" promptText="Selecione o nome" />
+      <JFXTextField fx:id="txt_bi" disable="true" editable="false" layoutX="173.0" layoutY="230.0" prefHeight="25.0" prefWidth="239.0" promptText="Visualize o seu Bi aqui" />
+      <JFXDatePicker fx:id="data_falta" defaultColor="#006699" editable="false" layoutX="172.0" layoutY="316.0" prefHeight="25.0" prefWidth="239.0" promptText="Selecione a data aqui" />
+      <JFXButton fx:id="btn_cadastrar" buttonType="RAISED" layoutX="173.0" layoutY="377.0" onAction="#registrar" prefHeight="44.0" prefWidth="228.0" style="-fx-background-color: #006699;" text="Registrar" textFill="WHITE" />
+      <JFXButton fx:id="btn_actualizar" buttonType="RAISED" layoutX="173.0" layoutY="436.0" onAction="#actualizar" prefHeight="44.0" prefWidth="228.0" style="-fx-background-color: #006699;" text="Actualizar" textFill="WHITE" />
+      <TableView fx:id="tabela" layoutX="448.0" layoutY="39.0" onMouseClicked="#Seleciona_Tabela" prefHeight="434.0" prefWidth="559.0">
+        <columns>
+          <TableColumn fx:id="coluna_nome" prefWidth="163.0" text="Nome Funcionário" />
+          <TableColumn fx:id="coluna_bi" prefWidth="77.0" text="Bi_Cedula" />
+            <TableColumn fx:id="coluna_funcao" prefWidth="106.0" text="Função" />
+            <TableColumn fx:id="coluna_data" prefWidth="104.0" text="Data Ausencia" />
+            <TableColumn fx:id="coluna_estado" prefWidth="108.0" text="Estado" />
+        </columns>
+      </TableView>
+      <Pane layoutX="956.0" layoutY="2.0" onMouseClicked="#show_panel_lateral" prefHeight="33.0" prefWidth="53.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <JFXHamburger layoutX="12.0" layoutY="10.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="panel_lateral" layoutX="808.0" layoutY="38.0" prefHeight="229.0" prefWidth="200.0" style="-fx-background-color: black; -fx-border-color: #006699;" visible="false">
+         <children>
+            <HBox layoutY="-2.0" prefHeight="42.0" prefWidth="200.0" style="-fx-background-color: #006699;">
+               <children>
+                  <Label text="Opções" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Segoe UI Black" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="70.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="47.0" prefHeight="36.0" prefWidth="200.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/images%20(7).jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label onMouseClicked="#submenu_carregaTabela" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Actualizar tabela">
+                     <font>
+                        <Font name="Segoe UI" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="8.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="submenus" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </HBox>
+            <HBox layoutY="84.0" prefHeight="36.0" prefWidth="200.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/apagar.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="lbl_eliminar" disable="true" onMouseClicked="#submenu_Eliminar" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Eliminar">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="24.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="submenus" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </HBox>
+            <HBox layoutY="121.0" prefHeight="36.0" prefWidth="200.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/1496637751.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label onMouseClicked="#submenu_showverdetalhes" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Ver detalhes">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="8.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="submenus" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </HBox>
+            <HBox layoutY="193.0" prefHeight="36.0" prefWidth="200.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/exclamacao.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label onMouseClicked="#submenu_showinfo" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Info">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="38.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="submenus" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </HBox>
+            <HBox layoutY="157.0" prefHeight="36.0" prefWidth="200.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/Presenca.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="lbl_justificarFaltas" disable="true" onMouseClicked="#submenu_showJustificar" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Justificar Faltas">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="9.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="submenus" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </HBox>
+         </children>
+      </Pane>
+      <JFXBadge layoutX="196.0" layoutY="442.0" prefHeight="33.0" prefWidth="53.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/transferir1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </JFXBadge>
+      <JFXBadge layoutX="196.0" layoutY="383.0" prefHeight="33.0" prefWidth="53.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/if_plus_1772631.png" />
+               </image>
+            </ImageView>
+         </children>
+      </JFXBadge>
+      <Label layoutX="592.0" layoutY="469.0" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Total de registros:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_total" layoutX="719.0" layoutY="469.0" styleClass="menu" stylesheets="@../estilos/estudante.css" text="0">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="800.0" layoutY="479.0" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Ano lectivo:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_anolectivo" layoutX="894.0" layoutY="479.0" styleClass="menu" stylesheets="@../estilos/estudante.css" text="0">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_erroData" layoutX="172.0" layoutY="347.0" text="Data incorrecta" textFill="#ff0c0c" />
+   </children>
+</AnchorPane>

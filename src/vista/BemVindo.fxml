@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ConfiguracaoSistema.BemVindoController">
+   <children>
+      <Separator layoutY="166.0" prefHeight="0.0" prefWidth="738.0" />
+      <Label layoutX="81.0" layoutY="67.0" text="Muito Obrigado por ter escolhido os produtos da PalindromoS,esperamos que as suas necessidades sejam satisfeitas." />
+      <Pane layoutY="-1.0" prefHeight="57.0" prefWidth="800.0" style="-fx-background-color: #006699;">
+         <children>
+            <Label layoutX="10.0" layoutY="15.0" text="Seja Bem vindo ao- " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="189.0" layoutY="11.0" text="Escolar1 -100%" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="518.0" layoutY="28.0" text="Usuario:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="username" layoutX="587.0" layoutY="28.0" text="Usuario:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="16.0" layoutY="86.0" text="O sistema " />
+      <Label layoutX="74.0" layoutY="86.0" text="Escolar1" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="86.0" text="é um sistema de gestão escolar que cobre as funcionalidades desde a área " />
+      <Label layoutX="523.0" layoutY="86.0" text="PEDAGÓGICA até a FINANCEIRA" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="105.0" text="O" />
+      <Label layoutX="30.0" layoutY="105.0" text="Escolar1" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="105.0" text="é apenas a primeira versão do sistema de gestão escolar da Palindromos denominado" />
+      <Label layoutX="549.0" layoutY="105.0" text="Escolar" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="595.0" layoutY="105.0" text=",versões superiores" />
+      <Label layoutX="17.0" layoutY="123.0" text="e com funcionalidades mais avançadas serão criadas.Esperamos o seu contributo para tornar este sistema o melhor sistema de gestão" />
+      <Label layoutX="16.0" layoutY="141.0" text=" escolar do País." />
+      <Label layoutX="108.0" layoutY="141.0" text="Muito Obrigado e PalindromoS agradece pela confiança." textFill="#006699">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="168.0" text="Dados da instituição" textFill="#006699" underline="true">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="210.0" text="Nome:" textFill="#216283">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="251.0" text="Tipo:" textFill="#216283">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="297.0" text="Nivel:" textFill="#216283">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Circle fill="WHITE" layoutX="671.0" layoutY="265.0" radius="90.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="imagem" fitHeight="114.0" fitWidth="101.0" layoutX="625.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/164954.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="568.0" layoutY="375.0" text="Logotipo da instrituição">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nome" layoutX="85.0" layoutY="210.0" text="Nome:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_tipo" layoutX="87.0" layoutY="251.0" text="Tipo:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nivel" layoutX="82.0" layoutY="299.0" text="Nivel:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="254.0" layoutY="411.0" mnemonicParsing="false" onAction="#Adicionar" prefHeight="47.0" prefWidth="262.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Iniciar  Sistema" textFill="#fcfcfc" />
+      <Pane layoutX="-6.0" layoutY="471.0" prefHeight="47.0" prefWidth="809.0" style="-fx-background-color: #006699;">
+         <children>
+            <Label layoutX="258.0" layoutY="4.0" text="Copyright-PalindromS - S.A" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="23.0" text="2019" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="646.0" layoutY="2.0" onMouseClicked="#Editar" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Editar" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Label layoutX="26.0" layoutY="340.0" text="Slogan" textFill="#216283">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nivel1" layoutX="87.0" layoutY="342.0" text="Nivel:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="302.0" layoutY="210.0" text="Localização:" textFill="#216283">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nivel11" layoutX="398.0" layoutY="213.0" text="Nivel:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="305.0" layoutY="257.0" text="Telefone:" textFill="#216283">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nivel111" layoutX="398.0" layoutY="260.0" text="Nivel:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="305.0" layoutY="297.0" text="NIF:" textFill="#216283">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nivel1111" layoutX="396.0" layoutY="299.0" text="Nivel:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="305.0" layoutY="340.0" text="IBAN:" textFill="#216283">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_nivel11111" layoutX="396.0" layoutY="342.0" text="Nivel:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

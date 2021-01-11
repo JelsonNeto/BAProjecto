@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Notas.VisualizarNotasController">
+   <children>
+      <Label layoutX="28.0" layoutY="9.0" text="Visualizar" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="27.0" layoutY="48.0" prefHeight="439.0" prefWidth="780.0">
+        <columns>
+          <TableColumn fx:id="coluna_aluno" prefWidth="107.0" text="Nome do ALuno" />
+          <TableColumn fx:id="coluna_curso" prefWidth="91.0" text="Curso" />
+            <TableColumn fx:id="coluna_classe" prefWidth="91.0" text="Classe" />
+            <TableColumn fx:id="coluna_disciplina" prefWidth="117.0" text="Disciplina" />
+            <TableColumn fx:id="coluna_valor" prefWidth="117.0" text="Valor da Nota" />
+            <TableColumn fx:id="coluna_ano" prefWidth="117.0" text="Ano Lectivo" />
+            <TableColumn fx:id="coluna_descricao" prefWidth="139.0" text="Descrição" />
+        </columns>
+      </TableView>
+      <Button fx:id="actualizar" layoutX="823.0" layoutY="225.0" mnemonicParsing="false" onAction="#CallActualizar" prefHeight="56.0" prefWidth="192.0" style="-fx-background-color: #006699; -fx-text-fill: #ffffff;" styleClass="botoes" stylesheets="@../estilos/visualizar.css" text="Actualizar" />
+      <Button fx:id="eliminar" layoutX="823.0" layoutY="286.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="56.0" prefWidth="192.0" style="-fx-background-color: #006699; -fx-text-fill: #ffffff;" styleClass="botoes" stylesheets="@../estilos/visualizar.css" text="Eliminar" />
+      <Label layoutX="878.0" layoutY="121.0" text="Operações" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_pesquisa" layoutX="322.0" layoutY="17.0" onAction="#SelectOpcao" prefWidth="150.0" promptText="Selecione o campo" />
+      <Label layoutX="491.0" layoutY="21.0" text="Pesquisar" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_pesquisa" layoutX="561.0" layoutY="17.0" prefHeight="25.0" prefWidth="210.0" promptText="Digite o que quer Pesquisar aqui" />
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="832.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/apagar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="835.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir1.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="771.0" layoutY="14.0" prefHeight="32.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/pagamento.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="7.0" layoutY="2.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Separator layoutX="822.0" layoutY="150.0" prefHeight="0.0" prefWidth="210.0" />
+      <Button layoutX="823.0" layoutY="165.0" mnemonicParsing="false" onAction="#CaregarTabela" prefHeight="56.0" prefWidth="192.0" style="-fx-background-color: #006699; -fx-text-fill: #ffffff;" styleClass="botoes" stylesheets="@../estilos/visualizar.css" text="Inicializar Tabela" />
+   </children>
+</AnchorPane>

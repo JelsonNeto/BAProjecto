@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="996.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Estudante.PerfilAlunoController">
+   <children>
+      <Label layoutX="14.0" layoutY="5.0" text="Perfil do Estudante" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Circle fill="WHITE" layoutX="116.0" layoutY="167.0" radius="101.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="imagem" fitHeight="122.0" fitWidth="134.0" layoutX="54.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/activeUser.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="216.0" layoutY="279.0" prefHeight="0.0" prefWidth="777.0" />
+      <Label layoutX="284.0" layoutY="106.0" text="Nome completo:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="283.0" layoutY="143.0" text="Cedula ou Bi:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="190.0" text="Data de Nascimento:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="283.0" layoutY="231.0" text="Sexo:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="665.0" layoutY="65.0" text="Curso:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="665.0" layoutY="107.0" text="Classe:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="663.0" layoutY="149.0" text="Turma:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="662.0" layoutY="192.0" text="Periodo:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_nome" layoutX="435.0" layoutY="110.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_bi" layoutX="435.0" layoutY="146.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_datanasc" layoutX="463.0" layoutY="193.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_sexo" layoutX="370.0" layoutY="235.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_curso" layoutX="764.0" layoutY="69.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_classe" layoutX="765.0" layoutY="112.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_turma" layoutX="764.0" layoutY="152.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_periodo" layoutX="766.0" layoutY="195.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="21.0" text="Informações pessoais do estudante" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="222.0" layoutY="55.0" prefHeight="3.0" prefWidth="765.0" />
+      <HBox layoutX="269.0" layoutY="309.0" prefHeight="151.0" prefWidth="651.0" spacing="10.0">
+         <children>
+            <Pane onMouseClicked="#VerNotas" prefHeight="200.0" prefWidth="200.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="58.0" fitWidth="116.0" layoutX="65.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/exam-icon-png-3.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="22.0" layoutY="94.0" styleClass="Textos" stylesheets="@../estilos/home.css" text="Consultar Notas" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="Paineis" />
+                  <String fx:value="SetPaineis" />
+               </styleClass>
+            </Pane>
+            <Pane onMouseClicked="#FaltasAluno" prefHeight="112.0" prefWidth="211.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="58.0" fitWidth="116.0" layoutX="80.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/schedule.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="32.0" layoutY="93.0" styleClass="Textos" stylesheets="@../estilos/home.css" text="Gestão de Faltas" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="Paineis" />
+                  <String fx:value="SetPaineis" />
+               </styleClass>
+            </Pane>
+            <Pane layoutX="220.0" layoutY="10.0" onMouseClicked="#EmitirComunicado" prefHeight="112.0" prefWidth="211.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="58.0" fitWidth="116.0" layoutX="80.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/exam-icon-png-12.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="21.0" layoutY="93.0" styleClass="Textos" stylesheets="@../estilos/home.css" text="Emitir comunicado" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="Paineis" />
+                  <String fx:value="SetPaineis" />
+               </styleClass>
+            </Pane>
+         </children>
+      </HBox>
+      <Label layoutX="30.0" layoutY="289.0" text="Açções Extras" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="21.0" layoutY="321.0" prefWidth="200.0" />
+      <Label layoutX="53.0" layoutY="340.0" text="Status:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_status" layoutX="133.0" layoutY="343.0" text="Activo" textFill="#0ee464">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="374.0" prefHeight="23.0" prefWidth="77.0" text="Devedor:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_devedor" layoutX="133.0" layoutY="377.0" text="Não" textFill="#0ee464">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="409.0" prefHeight="23.0" prefWidth="151.0" text="Tipo de Estudante:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_tipoAluno" layoutX="202.0" layoutY="412.0" text="Label" textFill="#0ee464">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="661.0" layoutY="229.0" text="Encarregado:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_encarregado" layoutX="766.0" layoutY="231.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="65.0" text="Código do aluno:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_codigo" layoutX="435.0" layoutY="68.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane layoutX="937.0" layoutY="3.0" prefHeight="43.0" prefWidth="55.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="32.0" layoutX="13.0" layoutY="11.0" onMouseClicked="#Back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Seta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="707.0" layoutY="465.0" text="Ano Lectivo:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_anolectivo" layoutX="810.0" layoutY="468.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="456.0" onMouseClicked="#EmitirCartao" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Emitir Cartão Escolar" textFill="#1f7fae">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="507.0" layoutY="465.0" text="Nº Processo:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_nprocesso" layoutX="609.0" layoutY="468.0" text="0192" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

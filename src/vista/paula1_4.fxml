@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="1050.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pauta.Paula1_4Controller">
+   <children>
+      <TableView fx:id="tabela" prefHeight="474.0" prefWidth="1050.0">
+        <columns>
+          <TableColumn fx:id="coluna_nome" prefWidth="116.0" text="Nome do Estudante" />
+          <TableColumn prefWidth="117.0" text="L.Port">
+               <columns>
+                  <TableColumn fx:id="coluna_macPort" prefWidth="46.0" text="MAC" />
+                  <TableColumn fx:id="coluna_cpPort" prefWidth="41.0" text="CPP" />
+                  <TableColumn fx:id="coluna_ctPort" prefWidth="42.0" text="CT" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="178.0" text="E.Meio">
+               <columns>
+                  <TableColumn fx:id="coluna_macMeio" prefWidth="46.0" text="MAC" />
+                  <TableColumn fx:id="coluna_cpMeio" prefWidth="36.0" text="CPP" />
+                  <TableColumn fx:id="coluna_ctMeio" prefWidth="40.0" text="CT" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="178.0" text="Mat">
+               <columns>
+                  <TableColumn fx:id="coluna_macMat" prefWidth="46.0" text="MAC" />
+                  <TableColumn fx:id="coluna_cpMat" prefWidth="33.0" text="CPP" />
+                  <TableColumn fx:id="coluna_ctMat" prefWidth="44.0" text="CT" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="178.0" text="E.Musical">
+               <columns>
+                  <TableColumn fx:id="coluna_macMusical" prefWidth="46.0" text="MAC" />
+                  <TableColumn fx:id="coluna_cpMusica" prefWidth="42.0" text="CPP" />
+                  <TableColumn fx:id="coluna_ctMusica" prefWidth="35.0" text="CT" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="178.0" text="A.Praticas">
+               <columns>
+                  <TableColumn fx:id="coluna_macPraticas" prefWidth="46.0" text="MAC" />
+                  <TableColumn fx:id="coluna_cpPraticas" prefWidth="40.0" text="CPP" />
+                  <TableColumn fx:id="coluna_ctPraticas" prefWidth="39.0" text="CT" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="178.0" text="E.Fisica">
+               <columns>
+                  <TableColumn fx:id="coluna_macEFisica" prefWidth="46.0" text="MAC" />
+                  <TableColumn fx:id="coluna_cpEFisica" prefWidth="41.0" text="CPP" />
+                  <TableColumn fx:id="coluna_ctEFisica" prefWidth="38.0" text="CT" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="178.0" text="E.M.P">
+               <columns>
+                  <TableColumn fx:id="coluna_macEmp" prefWidth="46.0" text="MAC" />
+                  <TableColumn fx:id="coluna_cpEmp" prefWidth="41.0" text="CPP" />
+                  <TableColumn fx:id="coluna_ctEmp" prefWidth="38.0" text="CT" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="coluna_obs" prefWidth="61.0" text="Obs" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

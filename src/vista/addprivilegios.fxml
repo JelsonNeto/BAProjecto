@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="903.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Usuario.AddprivilegiosController">
+   <children>
+      <Label layoutX="35.0" layoutY="8.0" text="Adicionar Privilégios" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_nome" layoutX="72.0" layoutY="44.0" onAction="#SelecionafNome_inicializaCampos" prefHeight="25.0" prefWidth="283.0" promptText="Selecione o usuário" />
+      <Label layoutX="27.0" layoutY="85.0" text="Nome:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="127.0" text="Leitura:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_leitura" disable="true" layoutX="113.0" layoutY="122.0" prefHeight="25.0" prefWidth="135.0" promptText="Selecione o valor" />
+      <Label layoutX="25.0" layoutY="176.0" text="Inserção">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_insercao" disable="true" layoutX="113.0" layoutY="171.0" prefHeight="25.0" prefWidth="135.0" promptText="Selecione o valor" />
+      <Label layoutX="24.0" layoutY="223.0" text="Eliminação">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_eliminacao" disable="true" layoutX="114.0" layoutY="218.0" prefHeight="25.0" prefWidth="135.0" promptText="Selecione o valor" />
+      <Label layoutX="22.0" layoutY="273.0" text="Actualização">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_actualizacao" disable="true" layoutX="113.0" layoutY="268.0" prefHeight="25.0" prefWidth="135.0" promptText="Selecione o valor" />
+      <Label layoutX="29.0" layoutY="314.0" text="Impreesão">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_impressao" disable="true" layoutX="115.0" layoutY="311.0" prefHeight="25.0" prefWidth="135.0" promptText="Selecione o valor" />
+      <Label layoutX="587.0" layoutY="316.0" text="Usuário Responsável:" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="784.0" layoutY="316.0" text="Jelson Joao">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="342.0" layoutY="307.0" onAction="#Registrar" prefHeight="46.0" prefWidth="163.0" style="-fx-background-color: #006699;" text="Registrar" textFill="WHITE" />
+      <TableView fx:id="tabela" layoutX="345.0" layoutY="86.0" onMouseClicked="#Editar" prefHeight="213.0" prefWidth="546.0">
+        <columns>
+          <TableColumn fx:id="colluna_usuario" prefWidth="148.0" text="Usuário" />
+          <TableColumn fx:id="coluna_funcao" prefWidth="65.0" text="Função" />
+            <TableColumn fx:id="coluna_leitura" prefWidth="64.0" text="Leitura" />
+            <TableColumn fx:id="coluna_impressao" prefWidth="64.0" text="Impressão" />
+            <TableColumn fx:id="coluna_actualizacao" prefWidth="77.0" text="Actualização" />
+            <TableColumn fx:id="coluna_insercao" prefWidth="53.0" text="Inserção" />
+            <TableColumn fx:id="coluna_eliminacao" prefWidth="73.0" text="Eliminação" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txt_bi" editable="false" layoutX="106.0" layoutY="83.0" prefHeight="25.0" prefWidth="144.0" promptText="Visualize o Bi do usuário" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1050.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Home.PaginaHomeController">
+   <children>
+      <Label layoutX="71.0" layoutY="23.0" text="Pagina Inicial" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane_encarregado" layoutX="131.0" layoutY="157.0" onMouseClicked="#showEncarregado" prefHeight="200.0" prefWidth="345.0" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <Label layoutX="17.0" layoutY="150.0" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Encarregado de Educação" textFill="#006699">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="132.0" fitWidth="139.0" layoutX="97.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/encarregado.png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="SetPaineis" />
+            <String fx:value="Paineis" />
+         </styleClass>
+      </Pane>
+      <Pane fx:id="pane_pauta" layoutX="490.0" layoutY="157.0" onMouseClicked="#showMiniPauta" prefHeight="200.0" prefWidth="366.0" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <Label layoutX="52.0" layoutY="151.0" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Geração de Mini Pautas" textFill="#006699">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="132.0" fitWidth="139.0" layoutX="134.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/pautas2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="SetPaineis" />
+            <String fx:value="Paineis" />
+         </styleClass>
+      </Pane>
+      <Pane fx:id="pane_boletim" layoutX="131.0" layoutY="364.0" onMouseClicked="#showinformacoesBoletins" prefHeight="200.0" prefWidth="345.0" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <Label layoutX="61.0" layoutY="148.0" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Geração do Boletim" textFill="#006699">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="132.0" fitWidth="139.0" layoutX="110.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/exam-icon-png-3.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="SetPaineis" />
+            <String fx:value="Paineis" />
+         </styleClass>
+      </Pane>
+      <Pane fx:id="pane_faltas" layoutX="491.0" layoutY="364.0" onMouseClicked="#showPresencaFaltas" prefHeight="200.0" prefWidth="366.0" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <Label layoutX="86.0" layoutY="152.0" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Gestão de Faltas" textFill="#006699">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="132.0" fitWidth="139.0" layoutX="119.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/schedule.png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="SetPaineis" />
+            <String fx:value="Paineis" />
+         </styleClass>
+      </Pane>
+      <Separator layoutY="84.0" prefHeight="7.0" prefWidth="1036.0" style="-fx-background-color: #006699;" />
+      <ImageView fitHeight="57.0" fitWidth="50.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/homePNG.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="53.0" text="Bem vindo a janela principal do sistema" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="826.0" layoutY="59.0" text="Data Actual : ">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_data" layoutX="918.0" layoutY="59.0">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="606.0" text="Sistema de gestão escolar  versão 1.0">
+         <font>
+            <Font name="Segoe UI" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="805.0" layoutY="620.0" text="PalindromoS , Inc - 2018">
+         <font>
+            <Font name="Segoe UI" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

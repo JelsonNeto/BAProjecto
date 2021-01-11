@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.botao:hover
+{
+    -fx-underline: true;   
+}
+
+.imagem:hover
+{
+    -fx-background-color:#d6d5d5;
+}

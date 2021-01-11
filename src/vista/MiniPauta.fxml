@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1050.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pauta.MiniPautaController">
+   <children>
+      <ImageView fitHeight="55.0" fitWidth="57.0" layoutX="25.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/pautas2.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="70.0" prefHeight="7.0" prefWidth="1050.0" style="-fx-background-color: #006699;" />
+      <Label layoutX="87.0" layoutY="13.0" text="Geração da Mini Pauta">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="45.0" text="Gere aqui a mini pauta referente a cada turma">
+         <font>
+            <Font name="Segoe UI" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="79.0" text="Selecione os dados " textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_turma" layoutX="708.0" layoutY="108.0" onAction="#SelecionaTurma_InicializaDisciplina" prefHeight="25.0" prefWidth="161.0" promptText="Selecione a Turma" />
+      <ComboBox fx:id="cb_classe" layoutX="372.0" layoutY="108.0" onAction="#SelecionaClasse_InicializaPeriodo" prefHeight="25.0" prefWidth="161.0" promptText="Selecione a Classe" />
+      <ComboBox fx:id="cb_curso" layoutX="204.0" layoutY="108.0" onAction="#SelecionaCurso_InicializaClasse" prefHeight="25.0" prefWidth="161.0" promptText="Selecione o Curso" />
+      <ComboBox fx:id="cb_disciplina" layoutX="876.0" layoutY="108.0" onAction="#SelecionaDisciplina_InicializaTabela" prefHeight="25.0" prefWidth="161.0" promptText="Selecione a Disciplina" />
+      <ComboBox fx:id="cb_periodo" layoutX="540.0" layoutY="109.0" onAction="#SelecionaPeriodo_InicializaTurma" prefHeight="25.0" prefWidth="161.0" promptText="Selecione o Periodo" />
+      <Separator layoutX="9.0" layoutY="99.0" prefWidth="200.0" />
+      <Pane fx:id="pautaPane" layoutX="-1.0" layoutY="143.0" prefHeight="514.0" prefWidth="1050.0" style="-fx-background-color: white;" />
+      <Pane layoutX="1011.0" layoutY="34.0" onMouseClicked="#AbirInfo" prefHeight="32.0" prefWidth="36.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/informacao.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

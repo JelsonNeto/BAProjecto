@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="970.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.TotalpagamentomesespecificoController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Total de Propinas pagas  - no Mês">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="14.0" layoutY="54.0" prefHeight="377.0" prefWidth="950.0">
+         <columns>
+            <TableColumn fx:id="coluna_aluno" prefWidth="238.0" text="Nome do Aluno" />
+            <TableColumn fx:id="coluna_classe" prefWidth="112.0" text="Classe" />
+            <TableColumn fx:id="coluna_turma" prefWidth="98.0" text="Turma" />
+            <TableColumn fx:id="coluna_curso" prefWidth="124.0" text="Curso" />
+            <TableColumn fx:id="coluna_efeito" prefWidth="115.0" text="Efeito" />
+            <TableColumn fx:id="coluna_valor" prefWidth="125.0" text="Valor" />
+            <TableColumn fx:id="coluna_data" prefWidth="137.0" text="Data" />
+         </columns>
+      </TableView>
+      <Label layoutX="414.0" layoutY="447.0" text="Total:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="764.0" layoutY="434.0" mnemonicParsing="false" onAction="#Imprimir" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Imprimir" textFill="WHITE" />
+      <ImageView fitHeight="28.0" fitWidth="32.0" layoutX="795.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/Impirmir.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="txt_total" layoutX="463.0" layoutY="439.0" prefHeight="28.0" prefWidth="275.0">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="436.0" prefHeight="32.0" prefWidth="101.0" text="Total multas:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_multas" layoutX="220.0" layoutY="439.0" prefHeight="28.0" prefWidth="183.0">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_mes" layoutX="721.0" layoutY="20.0" onAction="#AlunosPagaram" prefHeight="28.0" prefWidth="244.0" promptText="Selecione o  mês" />
+   </children>
+</AnchorPane>

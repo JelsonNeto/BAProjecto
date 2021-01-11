@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+    -fx-background-color: white;
+}
+
+.btnPropriedades
+{
+     -fx-background-color: #006699;
+     -fx-border-radius:20px;
+     -fx-border-color: #006699;
+     
+}
+
+.esqueceu:hover
+{
+    -fx-text-fill: red;
+}

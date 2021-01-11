@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="970.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.TotalmultasController">
+   <children>
+      <Label layoutX="22.0" layoutY="14.0" text="Multas Pagas">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="22.0" layoutY="52.0" prefHeight="377.0" prefWidth="797.0">
+         <columns>
+            <TableColumn fx:id="coluna_curso" prefWidth="161.0" text="Curso( Nivel )" />
+            <TableColumn fx:id="coluna_turma" prefWidth="175.0" text="Turma" />
+            <TableColumn fx:id="coluna_classe" prefWidth="159.0" text="Classe" />
+            <TableColumn fx:id="coluna_valor" prefWidth="129.0" text="Valor" />
+            <TableColumn fx:id="coluna_mes" prefWidth="172.0" text="Mês" />
+         </columns>
+      </TableView>
+      <Label layoutX="342.0" layoutY="434.0" text="Total:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="626.0" layoutY="433.0" mnemonicParsing="false" onAction="#Imprimir" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Imprimir" textFill="WHITE" />
+      <ImageView fitHeight="28.0" fitWidth="32.0" layoutX="657.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/Impirmir.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="txt_total" layoutX="415.0" layoutY="437.0">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Pane layoutX="890.0" layoutY="359.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css" />
+      <JFXComboBox fx:id="cb_mes" layoutX="621.0" layoutY="21.0" onAction="#SelecionaMes_InicializaTabela" prefHeight="25.0" prefWidth="192.0" promptText="Selecione o mes" />
+      <JFXCheckBox fx:id="activar" checkedColor="#3c15bc" layoutX="843.0" layoutY="128.0" onAction="#Activado" text="Activar">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXCheckBox>
+      <Separator layoutX="819.0" layoutY="113.0" prefHeight="9.0" prefWidth="150.0" />
+      <Label layoutX="844.0" layoutY="77.0" text="Intervalo">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="826.0" layoutY="167.0" text="De:" />
+      <JFXComboBox fx:id="cb_mes_inicial" disable="true" layoutX="823.0" layoutY="187.0" onAction="#MesInicial_Inicializafinal" prefHeight="25.0" prefWidth="143.0" promptText="Mês inicial" />
+      <Label layoutX="827.0" layoutY="241.0" text="até::" />
+      <JFXComboBox fx:id="cb_mes_final" disable="true" layoutX="824.0" layoutY="261.0" onAction="#final_InicializaTabela" prefHeight="25.0" prefWidth="143.0" promptText="Mês final" />
+   </children>
+</AnchorPane>

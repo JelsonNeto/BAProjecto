@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="1050.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Menus.MatriculaController">
+   <children>
+      <Label layoutX="102.0" layoutY="26.0" prefHeight="34.0" prefWidth="305.0" text="Matricula e Confirmação">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/images%20(2).jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutY="99.0" prefHeight="7.0" prefWidth="1050.0" style="-fx-background-color: #006699;" />
+      <Label fx:id="lbl_visualizar_maticula" layoutX="28.0" layoutY="110.0" onMouseClicked="#VisualizarMatriculados" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Visualizar Matriculados">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <Pane fx:id="Principal" layoutX="15.0" layoutY="156.0" prefHeight="494.0" prefWidth="1026.0" />
+      <Label layoutX="102.0" layoutY="60.0" text="Manipule os dados dos estudantes aqui.">
+         <font>
+            <Font name="Segoe UI" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_confirmar" disable="true" layoutX="497.0" layoutY="110.0" onMouseClicked="#ConfirmaMatricula" prefHeight="44.0" prefWidth="216.0" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Actualização Anual">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_registro_matriculas" layoutX="726.0" layoutY="111.0" onMouseClicked="#RegistroMatricula" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Registro de Matriculas">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_visualizar_confirmados" layoutX="286.0" layoutY="111.0" onMouseClicked="#VisualizarConfirmados" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Ver Confirmações">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

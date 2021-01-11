@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="993.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Listas.ListaEstudantesController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="36.0" prefHeight="473.0" prefWidth="966.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Estudantes por Turma">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="7.0" prefHeight="444.0" prefWidth="959.0" style="-fx-background-color: white;" />
+                        <TableView fx:id="tabelaTurma" layoutX="13.0" layoutY="44.0" prefHeight="368.0" prefWidth="947.0">
+                           <columns>
+                              <TableColumn fx:id="coluna_nomeTurma" prefWidth="150.0" text="Nome do Estudante" />
+                              <TableColumn fx:id="coluna_sexoTurma" minWidth="0.0" prefWidth="126.0" text="Sexo" />
+                              <TableColumn fx:id="coluna_biTurma" minWidth="0.0" prefWidth="149.0" text="Numero de Bi ou Cedula" />
+                              <TableColumn fx:id="coluna_dataTurma" minWidth="0.0" prefWidth="149.0" text="Data de nascimento" />
+                              <TableColumn fx:id="coluna_tipoTurma" minWidth="0.0" prefWidth="202.0" text="Tipo de Estudante" />
+                              <TableColumn fx:id="coluna_statusTurma" minWidth="0.0" prefWidth="169.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="793.0" layoutY="421.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Total:" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txt_totalTurma" layoutX="851.0" layoutY="424.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="10.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Estudantes por Turma" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cb_turmaTurma" layoutX="759.0" layoutY="7.0" onAction="#SelecionaTurma_InicializaTabela" prefHeight="32.0" prefWidth="192.0" promptText="Selecione a turma" />
+                        <ComboBox fx:id="cb_classeTurma" layoutX="559.0" layoutY="7.0" onAction="#SelecionaClasse_InicializaTurma" prefHeight="32.0" prefWidth="192.0" promptText="Selecione a classe" />
+                        <ComboBox fx:id="cb_cursoTurma" layoutX="352.0" layoutY="7.0" onAction="#SelecionaCurso_InicializaClasse" prefHeight="32.0" prefWidth="192.0" promptText="Selecione o curso" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Estudantes por Curso">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelaCurso" layoutX="14.0" layoutY="42.0" prefHeight="368.0" prefWidth="947.0">
+                          <columns>
+                            <TableColumn fx:id="coluna_nomeCurso" prefWidth="150.0" text="Nome do Estudante" />
+                            <TableColumn fx:id="coluna_sexoCurso" minWidth="0.0" prefWidth="126.0" text="Sexo" />
+                              <TableColumn fx:id="coluna_biCurso" minWidth="0.0" prefWidth="149.0" text="Numero de Bi ou Cedula" />
+                              <TableColumn fx:id="coluna_dataCurso" minWidth="0.0" prefWidth="149.0" text="Data de nascimento" />
+                              <TableColumn fx:id="coluna_tipoCurso" minWidth="0.0" prefWidth="202.0" text="Tipo de Estudante" />
+                              <TableColumn fx:id="coluna_statusCurso" minWidth="0.0" prefWidth="169.0" text="Status" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="794.0" layoutY="419.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Total:" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txt_totalCurso" layoutX="852.0" layoutY="422.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="8.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Estudantes por Curso" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cb_cursoCurso" layoutX="769.0" layoutY="5.0" onAction="#SelecionaCursoInicializaTabela" prefHeight="32.0" prefWidth="192.0" promptText="Selecione o curso" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Estudantes Matriculados">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelaMatricula" layoutX="14.0" layoutY="42.0" prefHeight="368.0" prefWidth="947.0">
+                           <columns>
+                              <TableColumn fx:id="coluna_nomeMatricula" prefWidth="150.0" text="Nome do Estudante" />
+                              <TableColumn fx:id="coluna_sexoMatricula" minWidth="0.0" prefWidth="126.0" text="Sexo" />
+                              <TableColumn fx:id="coluna_biMatricula" minWidth="0.0" prefWidth="149.0" text="Numero de Bi ou Cedula" />
+                              <TableColumn fx:id="coluna_dataMatricula" minWidth="0.0" prefWidth="149.0" text="Data de nascimento" />
+                              <TableColumn fx:id="coluna_tipoMatricula" minWidth="0.0" prefWidth="202.0" text="Tipo de Estudante" />
+                              <TableColumn fx:id="coluna_statusMatricula" minWidth="0.0" prefWidth="169.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="794.0" layoutY="419.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Total:" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txt_totalMatricula" layoutX="852.0" layoutY="422.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="8.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Estudantes Matriculados" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cb_cursoMatricula" layoutX="338.0" layoutY="4.0" onAction="#SelecionaCurso_InicializaTabela_E_Turma" prefHeight="32.0" prefWidth="192.0" promptText="Selecione o curso" />
+                        <ComboBox fx:id="cb_classeMatricula" layoutX="537.0" layoutY="4.0" onAction="#SelecionaClasse_E_InicializaTurmaTabela" prefHeight="32.0" prefWidth="137.0" promptText="Selecione a classe" />
+                        <ComboBox fx:id="cb_turmaMatricula" layoutX="680.0" layoutY="4.0" onAction="#InicializaTurma_ConfigTabela" prefHeight="32.0" prefWidth="137.0" promptText="Selecione a turma" />
+                        <ComboBox fx:id="cb_anoMatricula" layoutX="823.0" layoutY="4.0" onAction="#SelecionaAno_InicializaTabela" prefHeight="32.0" prefWidth="137.0" promptText="Ano Lectivo" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Estudantes Confirmados">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelaConfirm" layoutX="14.0" layoutY="42.0" prefHeight="368.0" prefWidth="947.0">
+                           <columns>
+                              <TableColumn fx:id="coluna_nomeConfir" prefWidth="150.0" text="Nome do Estudante" />
+                              <TableColumn fx:id="coluna_sexoConfir" minWidth="0.0" prefWidth="126.0" text="Sexo" />
+                              <TableColumn fx:id="coluna_biConfirm" minWidth="0.0" prefWidth="149.0" text="Numero de Bi ou Cedula" />
+                              <TableColumn fx:id="coluna_dataConfirm" minWidth="0.0" prefWidth="149.0" text="Data de nascimento" />
+                              <TableColumn fx:id="coluna_tipoConfirm" minWidth="0.0" prefWidth="202.0" text="Tipo de Estudante" />
+                              <TableColumn fx:id="coluna_statusConfirm" minWidth="0.0" prefWidth="169.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="794.0" layoutY="419.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Total:" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txt_totalConfirm" layoutX="852.0" layoutY="422.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="8.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Estudantes Confirmados" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cb_cursoConfirm" layoutX="337.0" layoutY="4.0" onAction="#SelecionaCurso_InicializaTabela_E_TurmaConf" prefHeight="32.0" prefWidth="192.0" promptText="Selecione o curso" />
+                        <ComboBox fx:id="cb_classeConfirm" layoutX="536.0" layoutY="4.0" onAction="#SelecionaClasse_E_InicializaTurmaTabelaConf" prefHeight="32.0" prefWidth="137.0" promptText="Selecione a classe" />
+                        <ComboBox fx:id="cb_turmaConfirm" layoutX="679.0" layoutY="4.0" onAction="#InicializaTurma_ConfigTabelaConf" prefHeight="32.0" prefWidth="137.0" promptText="Selecione a turma" />
+                        <ComboBox fx:id="cb_anoConfirm" layoutX="822.0" layoutY="4.0" onAction="#SelecionaAno_InicializaTabelaConf" prefHeight="32.0" prefWidth="137.0" promptText="Ano Lectivo" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Desistentes/Activos">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelaDesist" layoutX="14.0" layoutY="42.0" prefHeight="368.0" prefWidth="947.0">
+                           <columns>
+                              <TableColumn fx:id="coluna_nomeDesist" prefWidth="150.0" text="Nome do Estudante" />
+                              <TableColumn fx:id="coluna_sexoDesist" minWidth="0.0" prefWidth="126.0" text="Sexo" />
+                              <TableColumn fx:id="coluna_biDesist" minWidth="0.0" prefWidth="149.0" text="Numero de Bi ou Cedula" />
+                              <TableColumn fx:id="coluna_dataDesist" minWidth="0.0" prefWidth="149.0" text="Data de nascimento" />
+                              <TableColumn fx:id="coluna_tipoDesist" minWidth="0.0" prefWidth="202.0" text="Tipo de Estudante" />
+                              <TableColumn fx:id="coluna_statusDesist" minWidth="0.0" prefWidth="169.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="794.0" layoutY="419.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Total:" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txt_totalDesist" layoutX="852.0" layoutY="422.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="8.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Estudantes Confirmados" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cb_statusDesistentes" layoutX="767.0" layoutY="4.0" onAction="#SelecionaStatusInicializaTabela" prefHeight="32.0" prefWidth="192.0" promptText="Selecione o Status" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Lista dos Estudantes Geral">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelaGeral" layoutX="14.0" layoutY="35.0" prefHeight="381.0" prefWidth="947.0">
+                           <columns>
+                              <TableColumn fx:id="coluna_nomeGeral" prefWidth="150.0" text="Nome do Estudante" />
+                              <TableColumn fx:id="coluna_sexoGeral" minWidth="0.0" prefWidth="126.0" text="Sexo" />
+                              <TableColumn fx:id="coluna_biGeral" minWidth="0.0" prefWidth="149.0" text="Numero de Bi ou Cedula" />
+                              <TableColumn fx:id="coluna_dataGeral" minWidth="0.0" prefWidth="149.0" text="Data de nascimento" />
+                              <TableColumn fx:id="coluna_tipoGeral" minWidth="0.0" prefWidth="202.0" text="Tipo de Estudante" />
+                              <TableColumn fx:id="coluna_statusGeral" minWidth="0.0" prefWidth="169.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="794.0" layoutY="419.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Total:" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txt_totalCurso1" layoutX="852.0" layoutY="422.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="8.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Lista Geral dos Estudantes" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="14.0" layoutY="3.0" styleClass="labelh" text="Listas dos Estudantes" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

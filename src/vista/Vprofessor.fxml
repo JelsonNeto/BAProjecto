@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="992.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Professor.VprofessorController">
+   <children>
+      <Label layoutX="11.0" layoutY="3.0" style="-fx-text-fill: #006699;" text="Visualizar">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="12.0" layoutY="34.0" onMouseClicked="#Editar" prefHeight="374.0" prefWidth="746.0">
+         <columns>
+            <TableColumn fx:id="coluna_nome" prefWidth="200.0" text="Nome completo" />
+            <TableColumn fx:id="coluna_Bi" prefWidth="161.0" text="Numero de BI ou Cedula" />
+            <TableColumn fx:id="coluna_data" prefWidth="227.0" text="Data de nascimento" />
+            <TableColumn fx:id="coluna_sexo" prefWidth="156.0" text="Sexo" />
+         </columns>
+      </TableView>
+      <Separator layoutX="763.0" layoutY="171.0" prefHeight="3.0" prefWidth="227.0" />
+      <Label layoutX="819.0" layoutY="137.0" text="Operações">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="814.0" layoutY="35.0" text="Carregar Tabela" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="793.0" layoutY="73.0" onAction="#CarregarTabela" prefHeight="50.0" prefWidth="151.0" style="-fx-background-color: #006699;" text="Carregar Tabela" textFill="WHITE" />
+      <Button fx:id="actualizar" disable="true" layoutX="776.0" layoutY="188.0" mnemonicParsing="false" onAction="#CallActualizar" prefHeight="50.0" prefWidth="185.0" styleClass="botoes" stylesheets="@../estilos/visualizarpagamento.css" text="Actualizar" />
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="791.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="eliminar" disable="true" layoutX="776.0" layoutY="246.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="50.0" prefWidth="185.0" styleClass="botoes" stylesheets="@../estilos/visualizarpagamento.css" text="Eliminar" />
+      <Button layoutX="776.0" layoutY="304.0" mnemonicParsing="false" onAction="#CallVerPerifil" prefHeight="50.0" prefWidth="185.0" styleClass="botoes" stylesheets="@../estilos/visualizarpagamento.css" text="Ver informação" />
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="788.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/apagar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="786.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/1496637751.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="214.0" layoutY="412.0" style="-fx-text-fill: #006699;" text="Total:">
+         <font>
+            <Font name="Segoe UI Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

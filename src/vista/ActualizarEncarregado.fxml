@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Encarregado.ActualizarEncarregadoController">
+   <children>
+      <Label layoutX="30.0" layoutY="22.0" style="-fx-text-fill: #006699;" text="Actualizar">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="158.0" text="Nome  do Pai:">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="216.0" text="Data de Nascimento">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="319.0" text="Ocupação">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="380.0" text="Endereço">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="455.0" text="Contacto">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nomepai" layoutX="266.0" layoutY="155.0" prefHeight="32.0" prefWidth="277.0" promptText="Digite o nome do pai" />
+      <DatePicker fx:id="datanasc" layoutX="266.0" layoutY="209.0" prefHeight="32.0" prefWidth="277.0" promptText="Selecione a data de nascimento" />
+      <TextField fx:id="ocupacao" layoutX="265.0" layoutY="314.0" prefHeight="32.0" prefWidth="277.0" promptText="Digite a ocupação do encarregado" />
+      <TextField fx:id="endereco" layoutX="264.0" layoutY="374.0" prefHeight="32.0" prefWidth="277.0" promptText="Municipio , Bairro , Rua" />
+      <TextField fx:id="contactos" layoutX="263.0" layoutY="449.0" prefHeight="32.0" prefWidth="277.0" promptText="Numero de Telefone" />
+      <ListView fx:id="lista_selecionados" layoutX="707.0" layoutY="281.0" prefHeight="120.0" prefWidth="295.0" />
+      <ListView fx:id="lista_selecionar" layoutX="707.0" layoutY="98.0" onMouseClicked="#SelecionaEstudante_AddListaSelecionado" prefHeight="161.0" prefWidth="295.0" />
+      <ComboBox fx:id="cb_curso" layoutX="546.0" layoutY="26.0" onAction="#SelecionaCurso_InicializaClasse" prefWidth="150.0" promptText="Selecione o Curso" />
+      <ComboBox fx:id="cb_classe" layoutX="707.0" layoutY="26.0" onAction="#SelecionaClasse_InicializaTurma" prefWidth="150.0" promptText="Selecione a Classe" />
+      <Separator layoutX="-1.0" layoutY="69.0" prefHeight="0.0" prefWidth="1018.0" />
+      <Label layoutX="564.0" layoutY="163.0" text="Selecione o Estudante">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="566.0" layoutY="323.0" prefWidth="136.0" text="Alunos Selecionados">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_turma" layoutX="865.0" layoutY="26.0" onAction="#SelecionaTurma_InicializaAlunos" prefWidth="150.0" promptText="Selecione a Turma" />
+      <Label layoutX="116.0" layoutY="264.0" text="Sexo">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="masc" layoutX="265.0" layoutY="265.0" mnemonicParsing="false" text="Masculino">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toogle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="feme" layoutX="374.0" layoutY="265.0" mnemonicParsing="false" text="Femenino">
+         <toggleGroup>
+         </toggleGroup>
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="708.0" layoutY="415.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="45.0" prefWidth="295.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Actualiizar" textFill="WHITE" />
+      <Button layoutX="707.0" layoutY="468.0" mnemonicParsing="false" onAction="#eliminarAlunos" prefHeight="45.0" prefWidth="295.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Eliminar Alunos" textFill="WHITE" />
+      <Label layoutX="116.0" layoutY="101.0" text="Nome  do Pai:">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nomemae" layoutX="266.0" layoutY="98.0" prefHeight="32.0" prefWidth="277.0" promptText="Digite o nome da mãe" />
+   </children>
+</AnchorPane>

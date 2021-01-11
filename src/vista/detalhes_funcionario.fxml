@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerirEntidade.Detalhes_funcionarioController">
+   <children>
+      <Label layoutX="24.0" layoutY="15.0" text="Detalhes - Funcionario" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Circle fill="WHITE" layoutX="130.0" layoutY="190.0" radius="101.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="imagem" fitHeight="122.0" fitWidth="134.0" layoutX="69.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/activeUser.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="226.0" layoutY="289.0" prefHeight="0.0" prefWidth="777.0" />
+      <Label layoutX="318.0" layoutY="104.0" text="Nome completo:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="317.0" layoutY="153.0" text="Cedula ou Bi:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="200.0" text="Data de Nascimento:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="242.0" text="Sexo:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_nome" layoutX="458.0" layoutY="108.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_bi" layoutX="430.0" layoutY="156.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_datanasc" layoutX="491.0" layoutY="203.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_sexo" layoutX="379.0" layoutY="246.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="27.0" text="Informações pessoais do Funcionario" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="23.0" />
+         </font>
+      </Label>
+      <Separator layoutX="232.0" layoutY="65.0" prefHeight="3.0" prefWidth="765.0" />
+      <Label layoutX="40.0" layoutY="332.0" text="Açções Extras" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="31.0" layoutY="364.0" prefWidth="200.0" />
+      <Label fx:id="txt_curso" layoutX="902.0" layoutY="144.0" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_classe" layoutX="902.0" layoutY="184.0" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="707.0" layoutY="105.0" text="Função:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="706.0" layoutY="154.0" text="Ano de Admissão:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="705.0" layoutY="201.0" text="Status:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="974.0" layoutY="1.0" onMouseClicked="#back" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="23.0" fitWidth="31.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Seta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="323.0" layoutY="327.0" text="Código Funcionário:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="322.0" layoutY="376.0" text="Total de Faltas:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="423.0" text="Faltas mês corrente:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="702.0" layoutY="326.0" text="Ano corrente:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="701.0" layoutY="375.0" text="Salários em atraso:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="700.0" layoutY="422.0" text="Nº de Meses não pago:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="404.0" onMouseClicked="#EmitirCartao" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Emitir Passe Funcionario" textFill="#1f7fae">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="373.0" layoutY="292.0" text="Outras informações" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_funcao" layoutX="860.0" layoutY="105.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_anoadminssao" layoutX="859.0" layoutY="154.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_status" layoutX="858.0" layoutY="201.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_anocorrente" layoutX="889.0" layoutY="325.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_qtd_salarios_atraso" layoutX="891.0" layoutY="375.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="n_meses_npagos" layoutX="890.0" layoutY="423.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_codigo" layoutX="493.0" layoutY="328.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_totaFaltas" layoutX="491.0" layoutY="377.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_falta_mes_corrente" layoutX="494.0" layoutY="424.0" text="Label" textFill="#2012dd">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="713.0" layoutY="463.0" text="Mês Corrente:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_mes_corrente" layoutX="872.0" layoutY="463.0" text="2018">
+         <font>
+            <Font name="Segoe UI Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

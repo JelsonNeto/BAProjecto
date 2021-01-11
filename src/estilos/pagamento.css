@@ -1,0 +1,38 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.SetPaineis
+{
+    -fx-background-color:white;
+    -fx-border-radius:2px;
+    -fx-border-color: #006699;
+}
+.Paineis:hover
+{
+    -fx-background-color: #e2e2e2;
+}
+
+.textos
+{
+    -fx-text-fill:#006699;
+}
+.labelh:hover
+{
+    -fx-underline:true;
+    -fx-text-fill:#006699;
+}
+.paineis:hover{
+     -fx-background-color: #006699;
+      -fx-border-radius:2px;
+}
+.textos_painel_user:hover{
+    -fx-text-fill: white;
+    -fx-underline: true;
+}
+.submenus
+{
+    -fx-border-color: #006699;
+    -fx-border-radius: 5px;
+    -fx-background-color: white;
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="973.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.DispesasMensalController">
+   <children>
+      <Label layoutX="14.0" layoutY="22.0" text="Dispesas por função">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="5.0" layoutY="79.0" prefHeight="4.0" prefWidth="960.0" />
+      <JFXComboBox fx:id="cb_anolectivo" layoutX="723.0" layoutY="47.0" onAction="#Seleciona_Ano_inicializaCampos" prefHeight="25.0" prefWidth="225.0" promptText="Selecione o ano Lectivo" />
+      <Label layoutX="58.0" layoutY="99.0" text="Director Geral" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="137.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="212.0" text="Director Pedagógico" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="375.0" layoutY="394.0" text="Professor" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="99.0" text="Secretário" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="209.0" text="Contabilista" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="562.0" layoutY="206.0" text="Limpeza" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="562.0" layoutY="99.0" text="Segurança" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="710.0" layoutY="390.0" text="Total" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="713.0" layoutY="437.0" text="Valor:" textFill="#237380">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_dg" layoutX="95.0" layoutY="138.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="379.0" layoutY="427.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_professor" layoutX="411.0" layoutY="428.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="245.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_dp" layoutX="94.0" layoutY="246.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="365.0" layoutY="129.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="bl_v_sec" layoutX="400.0" layoutY="130.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="368.0" layoutY="236.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_c" layoutX="403.0" layoutY="235.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="566.0" layoutY="232.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_l" layoutX="601.0" layoutY="233.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="562.0" layoutY="129.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_s" layoutX="597.0" layoutY="130.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_total" layoutX="757.0" layoutY="439.0" prefHeight="15.0" prefWidth="207.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_mes" layoutX="473.0" layoutY="47.0" onAction="#Seleciona_mes_inicializaAno" prefHeight="25.0" prefWidth="225.0" promptText="Selecione o mês" />
+      <Pane layoutX="924.0" layoutY="1.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Imprimir" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Impirmir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="57.0" layoutY="314.0" text="Director Administrativo" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="347.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_admin" layoutX="93.0" layoutY="348.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="393.0" text="S.director Administrativo" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="426.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_sub_Admin" layoutX="97.0" layoutY="427.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="313.0" text="Coordenador(a)" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="346.0" text="Valor:" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_v_coordenador" layoutX="402.0" layoutY="347.0" textFill="#405057">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

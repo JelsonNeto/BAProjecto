@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Home.HomePagamentoController">
+   <children>
+      <Pane fx:id="pprincipal" prefHeight="545.0" prefWidth="1016.0">
+         <children>
+            <HBox layoutX="125.0" layoutY="75.0" prefHeight="200.0" prefWidth="776.0" spacing="60.0">
+               <children>
+                  <Pane onMouseClicked="#showEfectuarPagamento" prefHeight="149.0" prefWidth="365.0" stylesheets="@../estilos/pagamento.css">
+                     <children>
+                        <Label layoutX="40.0" layoutY="142.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Efectuar Pagamento" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="124.0" fitWidth="128.0" layoutX="92.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/dinheiro2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="SetPaineis" />
+                        <String fx:value="Paineis" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#showVisualizarPagamento" prefHeight="149.0" prefWidth="365.0" stylesheets="@../estilos/pagamento.css">
+                     <children>
+                        <Label layoutX="53.0" layoutY="142.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Visualizar Pagamento" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="124.0" fitWidth="139.0" layoutX="98.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/dinheiro.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="Paineis" />
+                        <String fx:value="SetPaineis" />
+                     </styleClass>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="288.0" layoutY="300.0" prefHeight="189.0" prefWidth="460.0">
+               <children>
+                  <Pane onMouseClicked="#showpagaemnto_atraso" prefHeight="189.0" prefWidth="455.0" stylesheets="@../estilos/pagamento.css">
+                     <styleClass>
+                        <String fx:value="Paineis" />
+                        <String fx:value="SetPaineis" />
+                     </styleClass>
+                     <children>
+                        <Label layoutX="112.0" layoutY="147.0" text="Pagamentos em atraso" textFill="#006699">
+                           <font>
+                              <Font name="Segoe UI Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="113.0" fitWidth="109.0" layoutX="173.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/atraso.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <Label layoutX="6.0" layoutY="7.0" stylesheets="@../estilos/pagamento.css" text="Pagamento - Estudante" textFill="#006699" underline="true">
+               <font>
+                  <Font name="Segoe UI Bold" size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutX="971.0" onMouseClicked="#back" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="31.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/Seta.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

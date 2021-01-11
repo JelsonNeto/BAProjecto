@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1050.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Menus.PresencaFaltasController">
+   <children>
+      <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="25.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/schedule.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="84.0" prefHeight="7.0" prefWidth="1050.0" style="-fx-background-color: #006699;" />
+      <Label layoutX="91.0" layoutY="20.0" text="Presenças e Faltas">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="52.0" text="Faça o controle das presenças e faltas aqui.">
+         <font>
+            <Font name="Segoe UI" size="11.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="34.0" fitWidth="32.0" layoutX="996.0" layoutY="32.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/back.png" />
+         </image>
+      </ImageView>
+      <Label disable="true" layoutX="102.0" layoutY="93.0" onMouseClicked="#Estudante" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Estudantes">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="93.0" onMouseClicked="#Professor" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Funcionários">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <Pane fx:id="Principal" layoutX="9.0" layoutY="132.0" prefHeight="494.0" prefWidth="1026.0" />
+   </children>
+</AnchorPane>

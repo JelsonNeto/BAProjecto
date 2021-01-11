@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pauta.VerDetalhes_minipautaController">
+   <children>
+      <Label layoutX="24.0" layoutY="13.0" stylesheets="@../estilos/cadastrar.css" text="Visualizar Detalhes - Mini Pautas" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="27.0" layoutY="55.0" prefHeight="410.0" prefWidth="982.0">
+        <columns>
+          <TableColumn fx:id="coluna_nome" prefWidth="261.0" text="Nome do estudante" />
+          <TableColumn fx:id="coluna_disciplina" prefWidth="145.0" text="Disciplina" />
+            <TableColumn fx:id="coluna_mac" prefWidth="199.0" text="MAC" />
+            <TableColumn fx:id="coluna_cp" prefWidth="163.0" text="CP" />
+            <TableColumn fx:id="coluna_ct" prefWidth="213.0" text="CT" />
+        </columns>
+      </TableView>
+      <Label layoutX="432.0" layoutY="470.0" styleClass="menu" stylesheets="@../estilos/cadastrar.css" text="Total de Registros:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_pesquisar" focusColor="#006699" layoutX="499.0" layoutY="20.0" prefHeight="25.0" prefWidth="214.0" promptText="Pesquisar por" />
+      <JFXTextField fx:id="txt_pesquisar" focusColor="#006699" layoutX="723.0" layoutY="20.0" prefHeight="25.0" prefWidth="230.0" promptText="Digite o que deseja pesquisar" />
+      <Label layoutX="76.0" layoutY="485.0" prefHeight="19.0" prefWidth="73.0" text="Trimestre:">
+         <font>
+            <Font name="Segoe UI Black" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="486.0" text="Primeiro" textFill="#55159a" />
+      <Label layoutX="227.0" layoutY="485.0" text="Ano Lectivo:">
+         <font>
+            <Font name="Segoe UI Black" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="486.0" text="2019" textFill="#55159a" />
+      <Pane fx:id="panePreviuos" layoutX="913.0" layoutY="470.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css" />
+      <Label fx:id="lbl_total" layoutX="604.0" layoutY="475.0" prefHeight="28.0" prefWidth="39.0">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="827.0" layoutY="468.0" prefHeight="39.0" prefWidth="182.0" style="-fx-background-color: #006699;" text="Imprimir" textFill="WHITE" />
+      <JFXBadge layoutX="840.0" layoutY="474.0" prefHeight="28.0" prefWidth="45.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Impirmir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </JFXBadge>
+      <Pane layoutX="961.0" layoutY="13.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.DefinicoesGeraisPagamentoController">
+   <children>
+      <TabPane layoutX="6.0" layoutY="45.0" prefHeight="486.0" prefWidth="994.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Estudantes">
+              <content>
+                <fx:include source="definicoesGerais_estudante.fxml" />
+              </content>
+          </Tab>
+          <Tab text="Funcionários">
+              <content>
+                  <fx:include source="definicoesGerais_funcionarios.fxml" />
+              </content>
+          </Tab>
+          <Tab text="Ano/Mês Vigente">
+              <content>
+                  <fx:include source="definicoesGerais_mesAno.fxml" />
+              </content>
+          </Tab>
+        
+        </tabs>
+      </TabPane>
+      <Label layoutX="10.0" layoutY="6.0" styleClass="labelh" text="Definições de Pagamento" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Pane layoutX="954.0" layoutY="7.0" onMouseClicked="#back" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="23.0" fitWidth="31.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Seta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

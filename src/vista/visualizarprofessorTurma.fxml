@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="1028.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerirEntidade.VisualizarprofessorTurmaController">
+   <children>
+      <Label layoutX="22.0" layoutY="14.0" style="-: ;" styleClass="LabelTurma" stylesheets="@../estilos/cturma.css" text="Visualizar Professores da Turma" underline="true">
+         <font>
+            <Font name="Segoe UI Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="58.0" style="-: ;" styleClass="LabelTurma" stylesheets="@../estilos/cturma.css" text="Nome Turma:">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="92.0" style="-: ;" styleClass="LabelTurma" stylesheets="@../estilos/cturma.css" text="Curso( Nivel):">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="132.0" style="-: ;" styleClass="LabelTurma" stylesheets="@../estilos/cturma.css" text="Classe:">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="76.0" style="-: ;" styleClass="LabelTurma" stylesheets="@../estilos/cturma.css" text="Ano Lectivo:" underline="true">
+         <font>
+            <Font name="Segoe UI Bold" size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="33.0" layoutY="162.0" prefHeight="316.0" prefWidth="963.0">
+        <columns>
+          <TableColumn fx:id="coluna_nomeprofessor" prefWidth="459.0" text="Nome do Professor" />
+          <TableColumn fx:id="coluna_disciplina" prefWidth="503.0" text="Disciplina" />
+        </columns>
+      </TableView>
+      <Label layoutX="172.0" layoutY="484.0" style="-: ;" styleClass="LabelTurma" stylesheets="@../estilos/cturma.css" text="Total:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_curso" layoutX="213.0" layoutY="92.0" style="-: ;" styleClass="LabelTurma" text="Curso:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_classe" layoutX="213.0" layoutY="129.0" style="-: ;" styleClass="LabelTurma" text="Curso:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_turma" layoutX="213.0" layoutY="60.0" style="-: ;" styleClass="LabelTurma" text="Curso:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_anolectivo" layoutX="937.0" layoutY="82.0" style="-: ;" styleClass="LabelTurma" text="Curso:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_total" layoutX="243.0" layoutY="484.0" style="-: ;" styleClass="LabelTurma" text="Curso:">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

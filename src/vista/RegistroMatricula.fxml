@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="1026.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Estudante.RegistroMatriculadoController">
+    <stylesheets>
+        <URL value="@/estilos/visualizar.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="15.0" layoutY="9.0" text="Registro de Matriculas" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="13.0" layoutY="47.0" prefHeight="416.0" prefWidth="768.0">
+        <columns>
+          <TableColumn fx:id="coluna_codigo" prefWidth="71.0" text="Codigo" />
+          <TableColumn fx:id="coluna_nome" prefWidth="90.0" text="Nome" />
+            <TableColumn fx:id="coluna_Bi" prefWidth="119.0" text="Bi ou Cedula" />
+            <TableColumn fx:id="coluna_Data" prefWidth="118.0" text="D.Nascimento " />
+            <TableColumn fx:id="coluna_curso" prefWidth="130.0" text="Curso" />
+            <TableColumn fx:id="coluna_periodo" prefWidth="87.0" text="Periodo" />
+            <TableColumn fx:id="coluna_classe" prefWidth="56.0" text="Classe" />
+            <TableColumn fx:id="coluna_turma" prefWidth="96.0" text="Turma" />
+        </columns>
+      </TableView>
+      <Button layoutX="815.0" layoutY="242.0" mnemonicParsing="false" onAction="#CallVerPerifil" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: #006699; -fx-text-fill: #ffffff;" styleClass="botoes" stylesheets="@../estilos/visualizar.css" text="Ver Perfil">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font></Button>
+      <TextField fx:id="txt_pesquisa" layoutX="535.0" layoutY="15.0" prefHeight="25.0" prefWidth="210.0" promptText="Digite o que quer Pesquisar aqui" />
+      <Label layoutX="863.0" layoutY="185.0" text="Acções" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="805.0" layoutY="219.0" prefHeight="0.0" prefWidth="210.0" />
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="832.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/abstract-user-flat-3.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="741.0" layoutY="7.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button layoutX="815.0" layoutY="302.0" mnemonicParsing="false" onAction="#ExportarExcel" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: #006699; -fx-text-fill: #ffffff;" styleClass="botoes" stylesheets="@../estilos/visualizar.css" text="Exportar">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="833.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/Excel.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="431.0" layoutY="463.0" prefHeight="28.0" prefWidth="199.0" text="Total Visualizados:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_total" layoutX="670.0" layoutY="463.0" prefHeight="28.0" prefWidth="77.0" text="0">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Pane fx:id="panePreviuos" layoutX="868.0" layoutY="397.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="2.0" onMouseClicked="#PreviuosDados" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/prev-icon-pngsmall-12.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneNext" layoutX="911.0" layoutY="397.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="2.0" onMouseClicked="#NextDados" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/next-icon-pngsmall-12.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="463.0" text="Total de Registros( Estudantes ) :" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_totalgeral" layoutX="355.0" layoutY="463.0" prefHeight="28.0" prefWidth="77.0" text="0">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_filas" layoutX="629.0" layoutY="463.0" prefHeight="28.0" prefWidth="39.0" text="0 -">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="828.0" layoutY="44.0" text="Ano Lectivo" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="804.0" layoutY="78.0" prefHeight="3.0" prefWidth="210.0" />
+      <Separator layoutX="803.0" layoutY="151.0" prefHeight="3.0" prefWidth="210.0" />
+      <Pane layoutX="980.0" layoutY="-1.0" onMouseClicked="#AbirInfo" prefHeight="39.0" prefWidth="44.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/informacao.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXComboBox fx:id="cb_pesquisa" layoutX="352.0" layoutY="15.0" prefHeight="25.0" prefWidth="179.0" promptText="Selecione a opção" />
+      <JFXComboBox fx:id="cb_ano" layoutX="812.0" layoutY="108.0" prefHeight="25.0" prefWidth="179.0" promptText="Selecione o ano lectivo" />
+   </children>
+</AnchorPane>

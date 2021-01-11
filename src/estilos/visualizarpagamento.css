@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+    -fx-background-color: white;
+}
+
+.botoes
+{
+    -fx-background-color: #006699;
+    -fx-text-fill: white;
+    -fx-border-radius: 14px;
+}

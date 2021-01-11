@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="1028.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerirEntidade.AdicionarprofessorTurmaController">
+   <children>
+      <Label layoutX="16.0" layoutY="11.0" style="-fx-text-fill: #006699;" text="Adicionar Professor a Turma">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutY="43.0" prefHeight="2.0" prefWidth="1028.0" />
+      <Label layoutX="27.0" layoutY="62.0" text="Turma selecionada:">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_turma" layoutX="191.0" layoutY="62.0" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="94.0" text="Curso pertencente:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_curso" layoutX="192.0" layoutY="94.0" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="124.0" text="Classe pertencente:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_classe" layoutX="188.0" layoutY="124.0" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listaprofessores" layoutX="28.0" layoutY="200.0" prefHeight="298.0" prefWidth="320.0" />
+      <ListView fx:id="listadsciplinas" layoutX="359.0" layoutY="94.0" onMouseClicked="#SelecionaProf_disciplina" prefHeight="390.0" prefWidth="287.0" />
+      <ListView fx:id="lista_professor_disciplina" layoutX="653.0" layoutY="93.0" onMouseClicked="#EliminaItens" prefHeight="390.0" prefWidth="366.0" />
+      <Label layoutX="27.0" layoutY="168.0" text="Professores Disponiveis">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="7.0" layoutY="154.0" prefHeight="3.0" prefWidth="269.0" />
+      <Label layoutX="359.0" layoutY="60.0" text="Disciplinas Disponiveis">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="642.0" layoutY="60.0" text="Professor --&gt;Disciplina( Selecionado)">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="810.0" layoutY="487.0" mnemonicParsing="false" onAction="#Adicionar" prefHeight="25.0" prefWidth="204.0" style="-fx-background-color: #006699;" text="Adicionar" textFill="WHITE" />
+      <Label fx:id="lbl_msg_ja_associada" layoutX="370.0" layoutY="490.0" text="Disciplina ja associada a um professor nesta turma" textFill="#e80000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

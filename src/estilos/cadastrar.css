@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.menu:hover
+{
+    -fx-text-fill:#006699;
+    -fx-underline:true;
+}

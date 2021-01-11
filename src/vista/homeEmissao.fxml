@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Home.HomeEmissaoController">
+   <children>
+      <HBox layoutX="104.0" layoutY="59.0" prefHeight="200.0" prefWidth="776.0" spacing="60.0">
+         <children>
+            <Pane fx:id="pane_emissao" onMouseClicked="#showCartao" prefHeight="149.0" prefWidth="365.0" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <Label layoutX="52.0" layoutY="144.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Emitir Cartão Escolar" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="128.0" layoutX="92.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/boletim.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="SetPaineis" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="pane_horario" onMouseClicked="#showhorario" prefHeight="149.0" prefWidth="365.0" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <Label layoutX="65.0" layoutY="142.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Criação de Horário " textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="139.0" layoutX="115.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/horariot.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="SetPaineis" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="104.0" layoutY="272.0" prefHeight="200.0" prefWidth="776.0" spacing="60.0">
+         <children>
+            <Pane fx:id="pane_declaracao" disable="true" onMouseClicked="#showCartaoCertificado" prefHeight="149.0" prefWidth="365.0" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <Label layoutX="71.0" layoutY="142.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Emitir Declaração" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="110.0" fitWidth="118.0" layoutX="110.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/certt.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="SetPaineis" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="pane_comunicaddos" disable="true" onMouseClicked="#showComunicados" prefHeight="149.0" prefWidth="365.0" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <Label layoutX="53.0" layoutY="142.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Comunicados Gerais" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="139.0" layoutX="98.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/pautas2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="SetPaineis" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

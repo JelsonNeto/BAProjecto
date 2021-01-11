@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="953.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="10.0" layoutY="11.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Filtragem por Turma" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView layoutX="14.0" layoutY="42.0" prefHeight="356.0" prefWidth="926.0">
+        <columns>
+          <TableColumn prefWidth="183.0" text="Nome da Turma" />
+          <TableColumn prefWidth="158.0" text="Curso Associado" />
+            <TableColumn prefWidth="163.0" text="Classe Associada" />
+            <TableColumn prefWidth="163.0" text="Total de Positivas" />
+            <TableColumn prefWidth="258.0" text="Total de Negativas" />
+        </columns>
+      </TableView>
+      <Label layoutX="227.0" layoutY="397.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Maior Nota:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="560.0" layoutY="397.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Menor Nota:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_curso" layoutX="286.0" layoutY="11.0" prefHeight="25.0" prefWidth="179.0" promptText="Selecione o curso(Nível)" />
+      <ComboBox fx:id="cb_classe" layoutX="472.0" layoutY="11.0" prefWidth="150.0" promptText="Selecione a classe" />
+      <ComboBox fx:id="cb_turma" layoutX="631.0" layoutY="11.0" prefWidth="150.0" promptText="Selecione a turma" />
+      <ComboBox fx:id="cb_criterio" layoutX="789.0" layoutY="11.0" prefWidth="150.0" promptText="Critério de filtro" />
+   </children>
+</AnchorPane>

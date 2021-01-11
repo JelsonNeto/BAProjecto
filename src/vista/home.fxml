@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="600.0" prefWidth="1233.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Home.HomeController">
+    <stylesheets>
+        <URL value="@/estilos/home.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="79.0" prefWidth="1248.0" styleClass="pcabecalho" stylesheets="@../estilos/home.css">
+         <children>
+            <ImageView fitHeight="29.0" fitWidth="43.0" layoutX="1185.0" layoutY="18.0" onMouseClicked="#Fechar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/logout.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="txt_tipo" layoutX="102.0" layoutY="6.0" text="Complexo Escolar" textFill="#fffffff7">
+               <font>
+                  <Font name="Segoe UI Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="txt_nome" layoutX="104.0" layoutY="33.0" text="Francisco Cuaha Bige" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="logo_foto" fitHeight="79.0" fitWidth="106.0" layoutX="9.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/logoEscola.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="txt_nome1" layoutX="509.0" layoutY="49.0" text="Anolectivo:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="txt_anolectivo" layoutX="623.0" layoutY="49.0" prefHeight="24.0" prefWidth="267.0" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="-15.0" layoutY="85.0" prefHeight="660.0" prefWidth="213.0" styleClass="pcabecalho" stylesheets="@../estilos/home.css">
+         <children>
+            <Circle fill="WHITE" layoutX="112.0" layoutY="94.0" radius="53.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fx:id="imagem_user" fitHeight="56.0" fitWidth="77.0" layoutX="79.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/activeUser.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="usuario_activo" layoutX="70.0" layoutY="150.0" text="Jelson Neto" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutY="200.0" prefHeight="0.0" prefWidth="213.0" />
+            <Pane fx:id="pHome" layoutX="12.0" layoutY="208.0" onMouseClicked="#ChangeColorHome" prefHeight="38.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lHome" layoutX="82.0" layoutY="9.0" prefHeight="17.0" prefWidth="46.0" styleClass="Textos" text="Home" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" layoutX="19.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/homePNG.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="Pane" />
+                  <String fx:value="Textos" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="pEstudante" layoutX="13.0" layoutY="347.0" onMouseClicked="#ChangeColorEstuda" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #006699;" styleClass="Pane2">
+               <children>
+                  <Label fx:id="lEstudante" layoutX="65.0" layoutY="9.0" prefHeight="22.0" prefWidth="92.0" styleClass="Textos" text="Estudantes" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="12.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/estudante.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pPagamento" layoutX="12.0" layoutY="483.0" onMouseClicked="#ChangeColorPaga" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #006699;">
+               <children>
+                  <Label fx:id="lPagamento" layoutX="52.0" layoutY="9.0" prefHeight="22.0" prefWidth="134.0" styleClass="Textos" text="Area de Finanças" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" layoutX="13.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/pagamentos.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pDefinicoes" layoutX="12.0" layoutY="570.0" onMouseClicked="#ChangeColorDef" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #006699;">
+               <children>
+                  <Label fx:id="lDefinicoes" layoutX="71.0" layoutY="9.0" prefHeight="22.0" prefWidth="92.0" styleClass="Textos" text="Definições" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" layoutX="19.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/settings.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="tipo_usuario" layoutX="71.0" layoutY="167.0" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pCadastrar" layoutX="13.0" layoutY="261.0" onMouseClicked="#ChangeColorCada" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #006699;" styleClass="Pane2">
+               <children>
+                  <Label fx:id="lCadastrar" layoutX="53.0" layoutY="9.0" prefHeight="22.0" prefWidth="124.0" styleClass="Textos" text="Gerir Entidades" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/management.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pMatricula" layoutX="13.0" layoutY="389.0" onMouseClicked="#changematricula" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #006699;" styleClass="Pane2">
+               <children>
+                  <Label fx:id="lmatricula" layoutX="54.0" layoutY="9.0" prefHeight="22.0" prefWidth="115.0" styleClass="Textos" text="Matricula/Conf" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" layoutX="19.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/images%20(2).jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pNotas" layoutX="12.0" layoutY="436.0" onMouseClicked="#ChangeColorNotas" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #006699;" styleClass="Pane2">
+               <children>
+                  <Label fx:id="lNotas" layoutX="54.0" layoutY="9.0" prefHeight="22.0" prefWidth="134.0" styleClass="Textos" text="Área Pedagógica" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" layoutX="18.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/notas.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pEmissao" layoutX="13.0" layoutY="525.0" onMouseClicked="#ChangeColorEmissao" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #006699;">
+               <children>
+                  <Label fx:id="lEmissao" layoutX="75.0" layoutY="9.0" prefHeight="22.0" prefWidth="65.0" styleClass="Textos" text="Emissão" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" layoutX="18.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/pedagogico.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="61.0" layoutY="615.0" styleClass="menu" text="EManager-1" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="11.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label layoutX="59.0" layoutY="629.0" styleClass="menu" text="PalindromoS-2019" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Pane fx:id="pRH" layoutX="12.0" layoutY="304.0" onMouseClicked="#ChangeColorRH" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #006699;" styleClass="Pane2">
+               <children>
+                  <Label fx:id="lrh" layoutX="49.0" layoutY="9.0" prefHeight="22.0" prefWidth="145.0" styleClass="Textos" text="Recursos Humanos" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/transferir%20(5).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="principal" layoutX="197.0" layoutY="80.0" prefHeight="660.0" prefWidth="1050.0" />
+   </children>
+</AnchorPane>

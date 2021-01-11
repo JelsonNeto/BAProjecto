@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="425.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Home.HomeLoginController">
+   <children>
+      <Pane fx:id="pane" prefHeight="578.0" prefWidth="425.0" style="-fx-background-color: white;">
+         <children>
+            <HBox layoutX="75.0" layoutY="185.0" prefHeight="36.0" prefWidth="254.0" style="-fx-border-color: #a19c9c; -fx-border-radius: 5px;">
+               <children>
+                  <FontAwesomeIconView fill="#006699" glyphName="USER" size="20">
+                     <HBox.margin>
+                        <Insets left="6.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <TextField fx:id="nome" prefHeight="36.0" prefWidth="149.0" promptText="Digite o seu nome de usuario" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="73.0" layoutY="266.0" prefHeight="36.0" prefWidth="254.0" style="-fx-border-color: #a19c9c; -fx-border-radius: 5px;">
+               <children>
+                  <FontAwesomeIconView fill="#006699" glyphName="LOCK" size="20">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <PasswordField fx:id="senha" prefHeight="36.0" promptText="Digite a sua senha" style="-fx-background-color: transparen;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <FontAwesomeIconView fill="#cd1212" glyphName="CLOSE" layoutX="394.0" layoutY="23.0" onMouseClicked="#close" size="20" />
+            <JFXButton fx:id="btn_adicionar" buttonType="RAISED" layoutX="98.0" layoutY="398.0" onAction="#AddPane" prefHeight="56.0" prefWidth="199.0" style="-fx-background-color: #006699;" text="Entrar" textFill="WHITE" />
+            <Label layoutX="-3.0" layoutY="535.0" styleClass="menu" text="EManager - 1" textFill="#656565">
+               <font>
+                  <Font name="Segoe UI" size="11.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label layoutX="-5.0" layoutY="549.0" styleClass="menu" text="PalindromoS-2019" textFill="#545050">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="lbl_msg_licenca1" layoutX="116.0" layoutY="471.0" text="A sua licença de utilização expirou." textFill="#9a4040" />
+            <Label fx:id="lbl_msg_licenca2" layoutX="54.0" layoutY="485.0" text="Para voltar a utilizar o Sistema, deverá actualizar a sua licença. " textFill="#9a4040" />
+         </children></Pane>
+      <Label fx:id="lbl_fp" layoutX="199.0" layoutY="325.0" onMouseClicked="#Esqueceu_senha" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Redifinir a senha" textFill="#030303">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="1032.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Estudante.FaltasAlunoController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" style="-fx-text-fill: #006699;" text="Gestão de Faltas">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="64.0" text="Nome do Estudante:">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="115.0" text="Situação:">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rb_ausente" layoutX="206.0" layoutY="114.0" mnemonicParsing="false" text="Ausente">
+         <toggleGroup>
+            <ToggleGroup fx:id="toogle" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rc_atrasado" layoutX="281.0" layoutY="114.0" mnemonicParsing="false" text="Atrasado" toggleGroup="$toogle" />
+      <Label layoutX="38.0" layoutY="164.0" text="Disciplina">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="216.0" text="Hora">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="275.0" text="Data">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nome" editable="false" layoutX="205.0" layoutY="60.0" prefHeight="32.0" prefWidth="262.0" />
+      <ComboBox fx:id="cb_disciplina" layoutX="203.0" layoutY="157.0" prefHeight="32.0" prefWidth="262.0" promptText="Selecione a disciplina" />
+      <TextField fx:id="txt_hora" layoutX="203.0" layoutY="210.0" onKeyTyped="#ConfiguraHora" prefHeight="32.0" prefWidth="262.0" promptText="Insira a hora no formato(HH:MM:SS)" />
+      <DatePicker fx:id="data" layoutX="205.0" layoutY="264.0" prefHeight="32.0" prefWidth="262.0" promptText="Escolha a data " />
+      <TableView fx:id="tabela" layoutX="507.0" layoutY="62.0" onMouseClicked="#SelecionaDadosTabela" prefHeight="382.0" prefWidth="505.0">
+        <columns>
+          <TableColumn fx:id="coluna_disciplina" prefWidth="159.0" text="Disciplina" />
+          <TableColumn fx:id="coluna_situacao" prefWidth="94.0" text="Situação" />
+            <TableColumn fx:id="coluna_hora" prefWidth="107.0" text="Hora " />
+            <TableColumn fx:id="coluna_data" prefWidth="144.0" text="Data" />
+        </columns>
+      </TableView>
+      <Label layoutX="621.0" layoutY="461.0" text="Total:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_total" editable="false" layoutX="675.0" layoutY="457.0" />
+      <Button fx:id="adicionar" layoutX="197.0" layoutY="333.0" mnemonicParsing="false" onAction="#AdicionarSala" prefHeight="40.0" prefWidth="274.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Adicionar" textFill="WHITE" />
+      <Button fx:id="eliminar" layoutX="197.0" layoutY="424.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="40.0" prefWidth="274.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Eliminar" textFill="WHITE" />
+      <Button fx:id="actualizar" disable="true" layoutX="196.0" layoutY="378.0" mnemonicParsing="false" onAction="#Actualizar" prefHeight="40.0" prefWidth="274.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Actualizar" textFill="WHITE" />
+      <Button fx:id="imprimir" disable="true" layoutX="853.0" layoutY="450.0" mnemonicParsing="false" onAction="#AdicionarSala" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Imprimir" textFill="WHITE" />
+      <TextField fx:id="txt_pesquisa" layoutX="720.0" layoutY="28.0" prefHeight="32.0" prefWidth="192.0" promptText="Insira o deseja pesquisar" />
+      <ComboBox fx:id="cb_pesquisa" layoutX="508.0" layoutY="28.0" prefHeight="32.0" prefWidth="205.0" promptText="Selecione a opção de pesquisa" />
+      <Pane layoutX="986.0" layoutY="2.0" prefHeight="25.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="32.0" layoutX="11.0" layoutY="2.0" onMouseClicked="#Back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Seta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="910.0" layoutY="23.0" prefHeight="40.0" prefWidth="55.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="11.0" layoutY="7.0" onMouseClicked="#pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="215.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/apagar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="221.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

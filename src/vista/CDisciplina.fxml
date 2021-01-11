@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="1028.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerirEntidade.CDisciplinaController">
+   <children>
+      <Label layoutX="15.0" layoutY="44.0" text="Disciplina Selecionada" textFill="#006699" underline="true">
+         <font>
+            <Font name="Segoe UI Bold" size="27.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_curso" layoutX="34.0" layoutY="132.0" onAction="#SelecionaCurso_InicializaClasse" prefHeight="30.0" prefWidth="218.0" promptText="Selecione o curso" />
+      <ComboBox fx:id="cb_classe" layoutX="34.0" layoutY="166.0" prefHeight="30.0" prefWidth="218.0" promptText="Selecione a classe" />
+      <Button fx:id="btn_adicionar" layoutX="298.0" layoutY="448.0" mnemonicParsing="false" onAction="#Adicionar" prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: #006699;" stylesheets="@../estilos/adicionarestudante.css" text="Adicionar" textFill="WHITE" />
+      <Button fx:id="btn_eliminar" disable="true" layoutX="704.0" layoutY="448.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: #006699;" stylesheets="@../estilos/adicionarestudante.css" text="Eliminar" textFill="WHITE" />
+      <Button fx:id="btn_actualizar" disable="true" layoutX="501.0" layoutY="448.0" mnemonicParsing="false" onAction="#Actualizar" prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: #006699;" stylesheets="@../estilos/adicionarestudante.css" text="Actualizar" textFill="WHITE" />
+      <TableView fx:id="tabela" layoutX="288.0" layoutY="130.0" prefHeight="312.0" prefWidth="710.0">
+         <columns>
+            <TableColumn fx:id="coluna_nome" prefWidth="210.0" text="Nome da disciplina" />
+            <TableColumn fx:id="nome_curso_coluna" prefWidth="236.0" text="Curso Associado" />
+            <TableColumn fx:id="coluna_classe" minWidth="0.0" prefWidth="263.0" text="Classe  Associada" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_editar" disable="true" layoutX="789.0" layoutY="83.0" mnemonicParsing="false" onAction="#Editar" prefHeight="41.0" prefWidth="209.0" style="-fx-background-color: #006699;" text="Editar" textFill="WHITE" />
+      <Label layoutX="465.0" layoutY="97.0" text="Pesquisar" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_pesquisa" layoutX="535.0" layoutY="93.0" prefHeight="25.0" prefWidth="210.0" promptText="Digite o que quer Pesquisar aqui" />
+      <ComboBox fx:id="cb_pesquisa" layoutX="294.0" layoutY="93.0" prefWidth="150.0" promptText="Pesquisar por" />
+      <Pane layoutX="750.0" layoutY="85.0" prefHeight="41.0" prefWidth="36.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="4.0" layoutY="4.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextArea fx:id="txtarea_disicplinas" layoutX="34.0" layoutY="204.0" onKeyTyped="#ApenasaLetra" prefHeight="234.0" prefWidth="218.0" promptText="Digite as discicplinas aqui." />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="317.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/if_plus_1772631.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="519.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="723.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/apagar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

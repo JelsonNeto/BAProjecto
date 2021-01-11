@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="src/" kind="src" path=""/>
+	<classpathentry kind="lib" path="dist/Genix.jar"/>
+	<classpathentry kind="lib" path="dist/lib/postgresql-9.2-1002.jdbc4.jar"/>
+	<classpathentry kind="lib" path="dist/run1931528230/Genix.jar"/>
+	<classpathentry kind="lib" path="dist/run1931528230/lib/postgresql-9.2-1002.jdbc4.jar"/>
+	<classpathentry kind="lib" path="dist/run219371360/Genix.jar"/>
+	<classpathentry kind="lib" path="dist/run219371360/lib/postgresql-9.2-1002.jdbc4.jar"/>
+	<classpathentry kind="lib" path="dist/run344412167/Genix.jar"/>
+	<classpathentry kind="lib" path="dist/run344412167/lib/postgresql-9.2-1002.jdbc4.jar"/>
+	<classpathentry kind="lib" path="lib/CopyLibs/org-netbeans-modules-java-j2seproject-copylibstask.jar"/>
+	<classpathentry kind="lib" path="lib/PostgreSQLDriver/postgresql-9.2-1002.jdbc4.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

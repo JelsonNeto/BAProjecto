@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.SetPaineis
+{
+    -fx-background-color:white;
+    -fx-border-radius:8px;
+    -fx-border-color: #006699;
+}
+.Paineis:hover
+{
+    -fx-background-color: #e2e2e2;
+     -fx-border-radius:8px;
+}
+
+.textos
+{
+    -fx-text-fill:#006699;
+    -fx-underline: true;
+}

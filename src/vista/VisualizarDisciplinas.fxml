@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="996.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="22.0" layoutY="9.0" text="Visualizar Disciplinas e Professores" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="150.0" text="Classe:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="192.0" text="Turma:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="107.0" text="Curso(ou Nivel):">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <TableView layoutX="214.0" layoutY="55.0" prefHeight="435.0" prefWidth="774.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Disciplinas" />
+          <TableColumn prefWidth="75.0" text="Professores Associados a Turma" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="8.0" layoutY="233.0" text="Ano lectivo:">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="11.0" layoutY="91.0" prefWidth="200.0" />
+      <Label layoutX="11.0" layoutY="67.0" text="Informações adicionais" textFill="#0a3951">
+         <font>
+            <Font name="Segoe UI Bold" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="23.0" fitWidth="41.0" layoutX="942.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/Seta.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

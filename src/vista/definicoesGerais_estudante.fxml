@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="994.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.DefinicoesGerais_estudanteController">
+   <children>
+      <Label layoutX="26.0" layoutY="15.0" prefHeight="24.0" prefWidth="149.0" text="Adiciona Preço" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="58.0" text="Curso">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="120.0" text="Classe">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="186.0" text="Efeito">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="255.0" text="Valor">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="319.0" text="Valor da Multa">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="curso" layoutX="143.0" layoutY="51.0" onAction="#InicializaClasse" prefHeight="25.0" prefWidth="257.0" promptText="Selecione o curso( ou nivel )" />
+      <JFXComboBox fx:id="classe" layoutX="142.0" layoutY="115.0" onAction="#SelecionaClasse_InicializaEfeito" prefHeight="25.0" prefWidth="257.0" promptText="Selecione a classe" />
+      <JFXComboBox fx:id="efeito" layoutX="142.0" layoutY="179.0" onAction="#SelecionaEfeito_visualizaMulta" prefHeight="25.0" prefWidth="257.0" promptText="Selecione o efeito" />
+      <JFXTextField fx:id="txt_valor_multa" disable="true" layoutX="143.0" layoutY="316.0" onKeyTyped="#ValidaMulta" prefHeight="25.0" prefWidth="257.0" promptText="Digite o valor para a multa" />
+      <JFXTextField fx:id="valor" layoutX="142.0" layoutY="252.0" onKeyTyped="#ValidaValor" prefHeight="25.0" prefWidth="257.0" promptText="Digite o valor" />
+      <JFXButton fx:id="btn_adicionar" buttonType="RAISED" layoutX="167.0" layoutY="373.0" onAction="#Preencher" prefHeight="49.0" prefWidth="209.0" style="-fx-background-color: #006699;" text="Adicionar" textFill="WHITE" />
+      <TableView fx:id="tabela" layoutX="421.0" layoutY="45.0" onMouseClicked="#SelecionaTabela" prefHeight="330.0" prefWidth="558.0">
+         <columns>
+            <TableColumn fx:id="efeito_coluna" prefWidth="180.0" text="Efeito do Pagamento" />
+            <TableColumn fx:id="curso_coluna" prefWidth="56.0" text="Curso" />
+            <TableColumn fx:id="classe_coluna" prefWidth="76.0" text="Classe" />
+            <TableColumn fx:id="multa_coluna" minWidth="0.0" prefWidth="124.0" text="Valor da Multa" />
+            <TableColumn fx:id="preco_coluna" prefWidth="121.0" text="Valor ( Preço )" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txt_pesquisar" layoutX="636.0" layoutY="12.0" prefHeight="25.0" prefWidth="223.0" promptText="Pesquise aqui." />
+      <Pane layoutX="865.0" layoutY="4.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Pesquisar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/lupa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="926.0" layoutY="8.0" onMouseClicked="#show_panel_lateral" prefHeight="33.0" prefWidth="53.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <JFXHamburger layoutX="12.0" layoutY="10.0" />
+         </children>
+      </Pane>
+      <Label layoutX="588.0" layoutY="386.0" prefHeight="24.0" prefWidth="181.0" text="Total de Registros:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_total" layoutX="759.0" layoutY="386.0" prefHeight="24.0" prefWidth="223.0" text="0">
+         <font>
+            <Font name="Segoe UI Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_erro_valor" layoutX="142.0" layoutY="284.0" text="Apenas números" textFill="#fc0000" visible="false">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_erro_multa" layoutX="142.0" layoutY="342.0" text="Apenas números" textFill="#fc0000" visible="false">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Label>
+      <Pane fx:id="panel_lateral" layoutX="793.0" layoutY="46.0" prefHeight="113.0" prefWidth="200.0" style="-fx-background-color: black; -fx-border-color: #006699;" visible="false">
+         <children>
+            <HBox layoutY="-2.0" prefHeight="42.0" prefWidth="200.0" style="-fx-background-color: #006699;">
+               <children>
+                  <Label text="Opções" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Segoe UI Black" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="70.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="40.0" onMouseClicked="#CarregarTabela" prefHeight="36.0" prefWidth="200.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/images%20(7).jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label onMouseClicked="#submenu_showverdetalhes" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Carregar Tabela">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="8.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="submenus" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="paneEditarPreco" disable="true" layoutY="76.0" onMouseClicked="#EditarPreco" prefHeight="36.0" prefWidth="200.0" stylesheets="@../estilos/pagamento.css">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/transferir1.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label onMouseClicked="#submenu_showinfo" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Editar">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="38.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="submenus" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

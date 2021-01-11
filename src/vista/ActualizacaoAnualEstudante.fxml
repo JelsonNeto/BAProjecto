@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Estudante.ActualizacaoAnualEstudanteController">
+   <children>
+      <Label layoutX="25.0" layoutY="30.0" text="Actualização Anual" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-1.0" layoutY="77.0" prefHeight="6.0" prefWidth="1026.0" />
+      <Label layoutX="559.0" layoutY="16.0" text="Selecione os dados do aluno" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="710.0" layoutY="431.0" mnemonicParsing="false" onAction="#Actualzar" prefHeight="46.0" prefWidth="296.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Actualizar" textFill="WHITE" />
+      <Label layoutX="6.0" layoutY="236.0" text="Estudantes:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="395.0" layoutY="251.0" text="&gt;&gt;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="712.0" layoutY="174.0" prefHeight="6.0" prefWidth="312.0" />
+      <Label layoutX="712.0" layoutY="145.0" text="Selecione a nova turma" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb_cursoNovo" layoutX="714.0" layoutY="190.0" onAction="#SelecionaCurso_InicializaClasse2" prefHeight="46.0" prefWidth="279.0" promptText="Selecione o  curso" />
+      <ComboBox fx:id="cb_classeNovo" layoutX="714.0" layoutY="251.0" onAction="#SelecionaClasse_InicializaTurma2" prefHeight="46.0" prefWidth="279.0" promptText="Selecione  a classe" />
+      <ComboBox fx:id="cb_turmaNovo" layoutX="714.0" layoutY="310.0" onAction="#SelecionaTurma_InicializaCondicao" prefHeight="46.0" prefWidth="279.0" promptText="Selecione a turma" />
+      <Label layoutX="25.0" layoutY="60.0" text="Actualize os estudantes que aprovaram, reprovaram aqui.">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lista_estudantes" layoutX="105.0" layoutY="84.0" onMouseClicked="#Seleciona_AlunoView" prefHeight="393.0" prefWidth="288.0" />
+      <ListView fx:id="lista_estudantesNovo" layoutX="411.0" layoutY="85.0" onMouseClicked="#EliminarSelecionado" prefHeight="393.0" prefWidth="288.0" />
+      <Pane layoutX="981.0" onMouseClicked="#AbirInfo" prefHeight="39.0" prefWidth="44.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fx:id="imagem1" fitHeight="25.0" fitWidth="41.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/informacao.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="32.0" fitWidth="44.0" layoutX="746.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir1.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cb_curso" layoutX="535.0" layoutY="48.0" onAction="#SelecionaOCurso_InicializaClasse" prefHeight="25.0" prefWidth="165.0" promptText="Selecione o curso" />
+      <JFXComboBox fx:id="cb_classe" layoutX="710.0" layoutY="48.0" onAction="#SelecionaClasse_InicializaTurma" prefHeight="25.0" prefWidth="149.0" promptText="Selecione a classe" />
+      <JFXComboBox fx:id="cb_turma" layoutX="869.0" layoutY="48.0" onAction="#SelecionaTurmaInicializarAluno" prefHeight="25.0" prefWidth="149.0" promptText="Selecione a turma" />
+   </children>
+</AnchorPane>

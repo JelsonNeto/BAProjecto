@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Home.HomePagamento_geralController">
+   <children>
+      <Pane fx:id="pprincipal" prefHeight="545.0" prefWidth="1016.0" />
+      <HBox layoutX="109.0" layoutY="44.0" prefHeight="220.0" prefWidth="782.0" spacing="40.0">
+         <children>
+            <Pane fx:id="pane_estudante" onMouseClicked="#showPagamento_Aluno" prefHeight="260.0" prefWidth="365.0" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <Label layoutX="34.0" layoutY="174.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Pagamento - Estudante" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="128.0" layoutX="106.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/testeEstudante.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="SetPaineis" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="pane_funcionario" onMouseClicked="#showPagamento_funcionario" prefHeight="260.0" prefWidth="365.0" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <Label layoutX="47.0" layoutY="179.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Funcionários - Salários " textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="139.0" layoutX="98.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/dinheiro.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="SetPaineis" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="111.0" layoutY="276.0" prefHeight="220.0" prefWidth="782.0" spacing="40.0">
+         <children>
+            <Pane fx:id="pane_definicoes" onMouseClicked="#showPagamento_definicoes" prefHeight="260.0" prefWidth="365.0" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <Label layoutX="29.0" layoutY="174.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Definições de Pagamento" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="141.0" layoutX="117.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/dinheiro3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="SetPaineis" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="pane_frelatorio" onMouseClicked="#showRelaFinanceiro" prefHeight="260.0" prefWidth="365.0" stylesheets="@../estilos/paginaHome.css">
+               <children>
+                  <Label layoutX="23.0" layoutY="172.0" styleClass="labelh" stylesheets="@../estilos/pagamento.css" text="Relatório Financeiro - Geral" textFill="#006699">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="80.0" fitWidth="101.0" layoutX="124.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icones/financeiro.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="SetPaineis" />
+                  <String fx:value="Paineis" />
+               </styleClass>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

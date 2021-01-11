@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="1050.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Menus.RHController">
+   <children>
+      <Label layoutX="102.0" layoutY="26.0" prefHeight="34.0" prefWidth="240.0" text="Recursos Humanos">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/transferir%20(5).png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="98.0" prefHeight="7.0" prefWidth="1050.0" style="-fx-background-color: #006699;" />
+      <Label fx:id="lbl_funcionario" layoutX="130.0" layoutY="103.0" onMouseClicked="#funcionario" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Funcionários">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <Pane fx:id="rhprincipal" layoutX="8.0" layoutY="140.0" prefHeight="515.0" prefWidth="1028.0" />
+      <Label layoutX="105.0" layoutY="60.0" text="Visualize e manipule as informações dos funcionários da instituição aqui.">
+         <font>
+            <Font name="Segoe UI" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_professor" layoutX="288.0" layoutY="104.0" onMouseClicked="#Professor" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Professor">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_informacoes" layoutX="409.0" layoutY="104.0" onMouseClicked="#InfoAdd" styleClass="menu" stylesheets="@../estilos/estudante.css" text="Informações Adicionais">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

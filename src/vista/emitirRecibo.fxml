@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RelatorioFinanceiro.EmitirReciboController">
+   <children>
+      <Label layoutX="87.0" layoutY="50.0" text="Emissão de recibo" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="51.0" fitWidth="122.0" layoutX="20.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/relatorio%20(2).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="15.0" layoutY="116.0" text="Dados do Aluno">
+         <font>
+            <Font name="Segoe UI" size="23.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="342.0" layoutY="61.0" prefHeight="431.0" prefWidth="662.0">
+        <columns>
+          <TableColumn fx:id="coluna_descricao" prefWidth="131.0" text="Descrição" />
+            <TableColumn fx:id="coluna_mes" prefWidth="142.0" text="Mês" />
+            <TableColumn fx:id="coluna_preco" prefWidth="104.0" text="Preço" />
+            <TableColumn fx:id="coluna_multa" prefWidth="115.0" text="Multa" />
+            <TableColumn fx:id="coluna_pago" prefWidth="168.0" text="Valor Pago" />
+        </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="191.0" text="Nome">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="227.0" text="Curso(Nivel)">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="270.0" text="Classe">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="308.0" text="Turno">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nome" editable="false" layoutX="94.0" layoutY="188.0" prefHeight="30.0" prefWidth="238.0" />
+      <TextField fx:id="txt_curso" editable="false" layoutX="93.0" layoutY="224.0" prefHeight="30.0" prefWidth="238.0" />
+      <TextField fx:id="txt_classe" editable="false" layoutX="93.0" layoutY="267.0" prefHeight="30.0" prefWidth="238.0" />
+      <TextField fx:id="txt_turno" editable="false" layoutX="93.0" layoutY="305.0" prefHeight="30.0" prefWidth="238.0" />
+      <Button layoutX="92.0" layoutY="384.0" mnemonicParsing="false" onAction="#Recibo" prefHeight="51.0" prefWidth="238.0" style="-fx-background-color: #006699;" styleClass="botao" stylesheets="@../estilos/adicionarestudante.css" text="Emitir Recibo" textFill="WHITE" />
+      <Label layoutX="342.0" layoutY="22.0" text="Dados do Pagamento" underline="true">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="32.0" fitWidth="53.0" layoutX="125.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/Impirmir.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="963.0" layoutY="9.0" onMouseClicked="#back" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="23.0" fitWidth="31.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Seta.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="430.0" layoutY="507.0" text="Total do valor pago:" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="718.0" layoutY="503.0" text="Total da multa:" textFill="#006699">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_valor_pago" layoutX="565.0" layoutY="509.0" textFill="#59d09e" />
+      <Label fx:id="lbl_multa" layoutX="820.0" layoutY="505.0" textFill="#38b53c" />
+   </children>
+</AnchorPane>

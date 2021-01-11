@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="973.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Pagamento.ComparacaoArrecadados_dispesas_anualController">
+   <children>
+      <Label layoutX="14.0" layoutY="24.0" text="Receitas">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="5.0" layoutY="79.0" prefHeight="4.0" prefWidth="960.0" />
+      <Label layoutX="48.0" layoutY="175.0" text="Receita Total" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cb_ano" layoutX="723.0" layoutY="47.0" onAction="#SelecionaAno_InicializaValores" prefHeight="25.0" prefWidth="225.0" promptText="Selecione o ano Lectivo" />
+      <Label layoutX="39.0" layoutY="318.0" text="Dispesa Total " textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="216.0" text="Valor:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="355.0" text="Valor:" textFill="#006699">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_total_arrecadado" layoutX="101.0" layoutY="216.0" prefHeight="19.0" prefWidth="320.0" textFill="#272f32">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_total_dispesas" layoutX="97.0" layoutY="355.0" prefHeight="19.0" prefWidth="320.0" textFill="#272f32">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="164.0" layoutY="23.0" text=" Dispesas ">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="24.0" text="VS" textFill="#ee0b0b">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="bar_chart" layoutX="424.0" layoutY="96.0" prefHeight="376.0" prefWidth="538.0" title="Grafico- Dispesas e Receitas" />
+      <Pane layoutX="927.0" layoutY="1.0" prefHeight="39.0" prefWidth="43.0" styleClass="Paineis" stylesheets="@../estilos/paginaHome.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Imprimir" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/Impirmir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

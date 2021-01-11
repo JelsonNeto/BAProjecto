@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="489.0" prefWidth="995.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Usuario.UsuarioController">
+   <children>
+      <Label layoutX="85.0" layoutY="24.0" text="Usuario" textFill="#006699">
+         <font>
+            <Font name="Segoe UI" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="51.0" layoutX="31.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icones/activeUser.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbl_adicionar" layoutX="218.0" layoutY="57.0" onMouseClicked="#showAddUser" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Adicionar">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="58.0" onMouseClicked="#showViewUser" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Visualizar">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Pane fx:id="principal" layoutX="44.0" layoutY="96.0" prefHeight="365.0" prefWidth="903.0" />
+      <Label fx:id="lbl_privilegios" layoutX="440.0" layoutY="58.0" onMouseClicked="#showPrivilegios" styleClass="menu" stylesheets="@../estilos/ccurso.css" text="Adicionar Privilégios">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

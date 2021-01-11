@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="1026.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="6.0" text="Estudante">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="12.0" layoutY="34.0" prefHeight="452.0" prefWidth="992.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Adiconar Presença">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="410.0" prefWidth="992.0">
+                     <children>
+                        <Pane prefHeight="426.0" prefWidth="992.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="1.0" layoutY="5.0" text="Adicionar Presença">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Actualizar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="-4.0" prefHeight="425.0" prefWidth="1000.0" style="-fx-background-color: white;" />
+                        <Label layoutX="6.0" layoutY="5.0" text="Actualizar Presença">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Visualizar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="424.0" prefWidth="992.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="6.0" layoutY="5.0" text="Visualizar Presença">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
